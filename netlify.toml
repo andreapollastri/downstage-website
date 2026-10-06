@@ -8,6 +8,14 @@
   to = "/downloads/Downstage-1.0.0-macOS-arm64.dmg"
   status = 302
 
+# The disk image and the zip are in the GitHub release of their version
+# (GitHub refuses files over 100 MB in a repository): /downloads/<file> goes
+# there. Files that are in the site (the .sha256) are served as they are.
+[[redirects]]
+  from = "/downloads/:file"
+  to = "https://github.com/andreapollastri/downstage-website/releases/download/v1.0.0/:file"
+  status = 302
+
 [[redirects]]
   from = "/license"
   to = "/terms.html"

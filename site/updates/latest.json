@@ -1,0 +1,18 @@
+{
+ "version": "1.0.0",
+ "date": "2026-10-06",
+ "notes": "Signed and notarized by Apple, with automatic updates. A new demo session; a 31-band graphic EQ; eight inserts on the master; a brickwall limiter; spectrum, phase and stereo image meters; narrow views and the Overview page; peak hold on every meter.",
+ "minimumSystemVersion": "13.0",
+ "arch": "arm64",
+ "zip": {
+  "url": "https://downstage.it/downloads/Downstage-1.0.0-macOS-arm64.zip",
+  "sha256": "df7997ef70a955f5f7029f6f2d60b2ff02f62d6d7cda1b54978980cacf6ca219",
+  "size": 134086093
+ },
+ "dmg": {
+  "url": "https://downstage.it/downloads/Downstage-1.0.0-macOS-arm64.dmg",
+  "sha256": "8b71722aa732ce57b316cad28c502a783b39a5c2b2d06f4cbd1af8f1e808f567",
+  "size": 137288163
+ },
+ "signature": "nhFB11CMVZillaImmGfj75SUiShtLZDMXRwRqzQzaoEeutBOAZeltSwOG2EK0haAjsflL+4R26php89AOzxKDA=="
+}

@@ -8,55 +8,34 @@ site/                    what Netlify publishes
   terms.html             built from LICENSE.md in the app repository
   privacy.html           built from PRIVACY.md in the app repository
   llms.txt               a plain summary for language models (llmstxt.org)
-  downloads/             Downstage-<version>-macOS-arm64.dmg and .zip, with their .sha256
+  downloads/             the .sha256 of the current disk image and zip
   updates/latest.json    the update manifest, signed with the update key
-netlify.toml             publish folder, redirects (/download, /terms, /privacy) and headers
+netlify.toml             publish folder, redirects and headers
 ```
 
-The disk image and the zip are **not committed** (GitHub refuses files over 100 MB): they live in `site/downloads/` on the machine that releases and reach Netlify with the CLI deploy below. Their checksums and `updates/latest.json` are committed.
+Netlify deploys this repository from GitHub on every push to `main` (publish directory `site`, no build command, both from `netlify.toml`).
+
+The disk image and the zip are **not in the repository** (GitHub refuses files over 100 MB): they are assets of the GitHub release `v<version>` of this repository, and `netlify.toml` sends `https://downstage.it/downloads/<file>` there with a redirect, so every link — the download button, `/download`, the update manifest — stays on downstage.it. GitHub serves them without using Netlify's bandwidth.
 
 ## Release a new version
 
-In the app repository (`downstage`, next to this one), with the version bumped in its `package.json`:
+In the app repository (`downstage`, next to this one), with the version bumped in its `package.json` and `gh` logged in:
 
 ```bash
-npm run build:mac
-node scripts/release.mjs --notes "What changed in this version"
+npm run build:mac                                   # signs with the Developer ID and notarizes
+node scripts/release.mjs --notes "What changed"
+cd ../downstage-website && git add -A && git commit -m "Downstage <version>" && git push
 ```
 
-`release.mjs` checks that the bundle is that version and that its audio engine passes the self-test, writes the disk image and the zip into `site/downloads/` (and removes the previous ones), writes `site/updates/latest.json` signed with the update key, and updates the download box and the `/download` redirect. `npm run build:dmg` runs both steps without notes.
+`release.mjs` checks that the app is that version, notarized, and that its audio engine passes the self-test; makes the disk image (signed and notarized too) and the zip; uploads both to the GitHub release `v<version>`; and writes here their checksums, `site/updates/latest.json` signed with the update key, the download box, the `/download` redirect and the release the `/downloads/` rule points at. The push publishes it.
 
-The update key is created once with `node scripts/release.mjs --keygen` in the app repository: the private key stays in `~/.downstage/update-signing-key.pem` (back it up, never commit it), the public key ships in the app. Installed copies only accept updates signed with it.
+The update key is created once with `node scripts/release.mjs --keygen` in the app repository: the private key stays in `~/.downstage/update-signing-key.pem` (back it up, never commit it), the public key ships in the app. Installed copies only accept updates signed with it. Signing and notarization use the Developer ID certificate in the keychain and the notarytool profile `downstage-notary`.
 
-If `LICENSE.md` or `PRIVACY.md` change, rebuild the legal pages from the app repository with `node scripts/site-legal.mjs`.
+If `LICENSE.md` or `PRIVACY.md` change, rebuild the legal pages from the app repository with `node scripts/site-legal.mjs`, then commit and push.
 
-Then deploy (below) and commit this repository.
+## Netlify
 
-## Deploy on Netlify
-
-The site is static: no build command, `site/` is published as it is.
-
-First time, on this machine:
-
-```bash
-npm install -g netlify-cli
-netlify login
-netlify link            # pick the existing downstage.it site, or `netlify init` to create one
-```
-
-Every release:
-
-```bash
-netlify deploy --prod   # uploads site/, disk image and zip included
-```
-
-`netlify deploy` without `--prod` publishes a draft URL to check first.
-
-Site settings, once, in the Netlify dashboard:
-
-- **Domain management**: `downstage.it` as the primary domain (and `www.downstage.it` redirecting to it), with Netlify DNS or the registrar's DNS pointing at Netlify; HTTPS is issued automatically (Let's Encrypt). The app only accepts updates over `https://downstage.it`.
-- **Build & deploy**: if the repository is also linked for continuous deployment, leave the build command empty and the publish directory `site` (from `netlify.toml`). A Git-only deploy does not carry the disk image and the zip, so release with the CLI.
-- **Headers**: `netlify.toml` sets them — the update manifest is never cached, downloads are served as attachments.
+The site is linked to this GitHub repository: every push to `main` is deployed. Site settings, once, in the Netlify dashboard: `downstage.it` as the primary domain (`www` redirecting to it) with HTTPS (Let's Encrypt, automatic); the app only accepts updates over `https://downstage.it`. `netlify.toml` sets the headers: the update manifest is never cached.
 
 ## How the app updates
 
