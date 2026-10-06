@@ -23,6 +23,8 @@ Product names of the hardware that inspired the units belong to their owners and
 
 ## Docs
 
+- [Guide](https://downstage.it/docs/): the built-in guide and the full shortcut list, in English. Same text as in the app (F1 and the ? button)
+- [Guida](https://downstage.it/docs/it/), [Guide](https://downstage.it/docs/fr/), [Anleitung](https://downstage.it/docs/de/), [Guía](https://downstage.it/docs/es/), [Guia](https://downstage.it/docs/pt/)
 - [Home page](https://downstage.it/): features, screenshots, the download box with version, size and SHA-256, and the FAQ
 - [License Agreement and Terms of Use](https://downstage.it/terms.html)
 - [Privacy Notice](https://downstage.it/privacy.html)

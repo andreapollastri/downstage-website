@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Downstage — X header</title>
+<link rel="stylesheet" href="promo.css">
+<style>
+  /* 1500×500. The profile picture covers roughly x 30–380, y 330–500: nothing important there. */
+  .canvas { width: 1500px; height: 500px; }
+  .copy { left: 80px; top: 64px; }
+  .copy .title { font-size: 128px; }
+  .copy .script { font-size: 54px; margin: 22px 0 0 4px; }
+  .copy .line { margin-top: 36px; margin-left: 6px; font: 600 24px/1 var(--body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--lime); }
+  .copy .line .url { font: 400 40px/1 var(--display); letter-spacing: 0.06em; text-transform: none; margin-left: 18px; vertical-align: -4px; }
+  .stage { left: 820px; top: 54px; width: 800px; perspective: 1400px; }
+  .stage .monitor { padding: 10px; border-radius: 15px; transform: rotateY(-22deg) rotateX(5deg); transform-origin: left center; }
+  .stage .monitor img { border-radius: 8px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="layer stage"><div class="monitor"><img src="img/desk.jpg" alt=""></div></div>
+  <div class="layer copy">
+    <h1 class="title"><span class="tube">DOWN</span><span class="neon-pink">STAGE</span></h1>
+    <span class="script neon-cyan">Record. Mix. Play it loud.</span>
+    <div class="line">Free for Mac<span class="url neon-cyan">downstage.it</span></div>
+  </div>
+</div>
+</body>
+</html>

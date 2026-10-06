@@ -31,6 +31,21 @@
   to = "/privacy.html"
   status = 301
 
+[[redirects]]
+  from = "/guide"
+  to = "/docs/"
+  status = 301
+
+[[redirects]]
+  from = "/docs/en"
+  to = "/docs/"
+  status = 301
+
+[[redirects]]
+  from = "/docs/en/"
+  to = "/docs/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
@@ -38,7 +53,8 @@
     X-Frame-Options = "DENY"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
-    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    # stats.misterdev.it: the visit counter in every page (its script, its requests, its no-script pixel).
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https://stats.misterdev.it; style-src 'self' 'unsafe-inline'; script-src 'self' https://stats.misterdev.it; connect-src 'self' https://stats.misterdev.it; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
 
 [[headers]]
   for = "/assets/*"
@@ -65,6 +81,18 @@
   [headers.values]
     Content-Type = "application/json; charset=utf-8"
     Cache-Control = "no-cache, no-store, must-revalidate"
+    X-Robots-Tag = "noindex"
+
+# Checksums and binaries are for people and the app, not for search results.
+[[headers]]
+  for = "/downloads/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json; charset=utf-8"
 
 [[headers]]
   for = "/llms.txt"

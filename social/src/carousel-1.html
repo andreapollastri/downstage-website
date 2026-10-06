@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Downstage — Carousel 1</title>
+<link rel="stylesheet" href="promo.css">
+<style>
+  .top { left: 0; right: 0; top: 84px; display: flex; justify-content: center; }
+  .top .kicker { font-size: 22px; }
+  .head { left: 0; right: 0; top: 168px; text-align: center; }
+  .head .title { font-size: 226px; }
+  .head .title span { display: block; }
+  .head .script { font-size: 72px; display: inline-block; margin-top: 30px; transform-origin: center; }
+  .stage { left: 92px; right: 92px; top: 742px; perspective: 1700px; }
+  .stage .monitor { transform: rotateX(8deg) rotateY(-6deg) rotateZ(-1deg); }
+  .fade-bottom { height: 360px; }
+  .foot { z-index: 4; }
+</style>
+</head>
+<body>
+<div class="canvas slide">
+  <div class="layer top"><span class="kicker"><i></i>A free DAW for Mac</span></div>
+  <div class="layer head">
+    <h1 class="title"><span class="tube">DOWN</span><span class="neon-pink">STAGE</span></h1>
+    <span class="script neon-cyan">Record. Mix. Play it loud.</span>
+  </div>
+  <div class="layer stage">
+    <div class="monitor"><img src="img/desk.jpg" alt=""></div>
+  </div>
+  <div class="fade-bottom"></div>
+  <div class="layer foot">
+    <span class="brandline"><img src="img/icon-512.png" alt="">Downstage · downstage.it</span>
+    <span class="swipe">SWIPE →</span>
+  </div>
+</div>
+</body>
+</html>
