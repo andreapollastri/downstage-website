@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Downstage — Guía</title>
+  <meta name="description" content="La guía de Downstage: grabación, edición, consola, rack y todos los atajos, con las mismas palabras de la app.">
+  <meta name="theme-color" content="#07060b">
+  <link rel="canonical" href="https://downstage.it/docs/es/">
+  <link rel="alternate" hreflang="en" href="https://downstage.it/docs/">
+  <link rel="alternate" hreflang="it" href="https://downstage.it/docs/it/">
+  <link rel="alternate" hreflang="fr" href="https://downstage.it/docs/fr/">
+  <link rel="alternate" hreflang="de" href="https://downstage.it/docs/de/">
+  <link rel="alternate" hreflang="es" href="https://downstage.it/docs/es/">
+  <link rel="alternate" hreflang="pt" href="https://downstage.it/docs/pt/">
+  <link rel="alternate" hreflang="x-default" href="https://downstage.it/docs/">
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Downstage — Guía">
+  <meta property="og:description" content="La guía de Downstage: grabación, edición, consola, rack y todos los atajos, con las mismas palabras de la app.">
+  <meta property="og:image" content="https://downstage.it/assets/img/og.jpg">
+  <meta property="og:url" content="https://downstage.it/docs/es/">
+  <meta property="og:locale" content="es">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script async src="https://stats.misterdev.it/i/89d59e1e-1ab3-4794-89c6-c8b602e311b6.js"></script>
+  <noscript><img src="https://stats.misterdev.it/collect/pixel.gif?k=89d59e1e-1ab3-4794-89c6-c8b602e311b6&amp;p=%2Fdocs%2Fes%2F" width="1" height="1" alt=""></noscript>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Downstage"><img src="/assets/img/icon-512.png" alt=""><b>DOWNSTAGE</b></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="/#console">Consola</a>
+        <a href="/#record">Grabar</a>
+        <a href="/#rack">Rack</a>
+        <a href="/#pedals">Pedales</a>
+        <a href="/#fx">Efectos</a>
+        <a href="/docs/es/" aria-current="page">Guía</a>
+        <a href="/#faq">FAQ</a>
+      </nav>
+      <label class="langpick"><select id="langpick" aria-label="Idioma"><option value="/docs/" data-lang="en">EN</option><option value="/docs/it/" data-lang="it">IT</option><option value="/docs/fr/" data-lang="fr">FR</option><option value="/docs/de/" data-lang="de">DE</option><option value="/docs/es/" data-lang="es" selected>ES</option><option value="/docs/pt/" data-lang="pt">PT</option></select></label>
+      <a class="btn small" href="/#download">Descargar</a>
+    </div>
+  </header>
+  <main class="docs">
+    <div class="wrap docs-layout">
+      <nav class="docs-nav" aria-label="Contenido">
+        <label class="docs-jump"><span>Contenido</span><select aria-label="Contenido"></select></label>
+        <ol class="docs-toc"><li><a href="#start">Primeros pasos</a></li><li><a href="#audio">Configuración de audio</a></li><li><a href="#edit">Edición</a></li><li><a href="#clips">Clips: duplicar, bucle, normalizar, ganancia, cuantizar, estirar, afinación</a></li><li><a href="#record">Grabación, tomas y comping</a></li><li><a href="#tempo">Tempo, compás y clic</a></li><li><a href="#mix">La ventana Mix</a></li><li><a href="#routing">Grupos, salidas y clic</a></li><li><a href="#channel">El canal completo</a></li><li><a href="#inserts">Inserts y rack</a></li><li><a href="#units">Dinámica, mastering, channel strips y procesadores</a></li><li><a href="#amps">Amplis, pedalera y modulación</a></li><li><a href="#fx">Efectos</a></li><li><a href="#sessions">Sesiones, importación y exportación</a></li><li><a href="#keys">Atajos</a></li><li><a href="#shortcuts">Lista completa</a></li><li><a href="#about">Acerca de Downstage</a></li></ol>
+      </nav>
+      <article class="docs-body">
+        <header class="docs-hero" id="top">
+          <p class="eyebrow">Downstage</p>
+          <h1 class="neon-cyan">Guía</h1>
+          <p class="lede">La misma guía de la app (F1) y la lista completa de atajos del botón ?.</p>
+        </header>
+        <section id="start">
+<h2>Primeros pasos</h2>
+<p><b>Downstage</b> (DS) es un grabador multipista y una consola de mezcla de estilo analógico para macOS: hasta <b>48 canales</b>, <b>8 buses de efectos</b>, <b>8 salidas aux estéreo</b>, <b>4 grupos estéreo</b> (A–D), <b>8 VCA</b>, un rack de <b>64 unidades</b> y un motor de audio nativo. Tiene cuatro ventanas, que se eligen con las pestañas de la barra superior o con <kbd>⌘1</kbd> <kbd>⌘2</kbd> <kbd>⌘3</kbd> <kbd>⌘4</kbd>; <kbd>⌘=</kbd> alterna entre Edit y Mix como en las grandes DAW.</p>
+<ul>
+<li><b>Edit</b>: la línea de tiempo. Graba, importa, corta, mueve, haz fundidos, bucles, normaliza y compón tus tomas; cada pista tiene un pequeño medidor.</li>
+<li><b>Mix</b>: la consola, de izquierda a derecha: canales, clic, grupos, retornos de efectos, VCA, salidas aux y master, en toda la altura de la ventana.</li>
+<li><b>FX</b>: las ocho unidades de efectos alimentadas por los envíos FX.</li>
+<li><b>Rack</b>: 64 huecos para cualquier unidad — dinámica, mastering, channel strips, amplis, pedales, EQ, cinta, el afinador — conectables a cualquier canal.</li>
+</ul>
+<p>La barra superior tiene el transporte (inicio, stop, play, grabar), el indicador de tiempo — haz clic para pasar de <b>compases y tempo</b> a un <b>reloj solo</b> en horas, minutos, segundos y milisegundos, para grabaciones en directo — el tempo y el compás en el cursor, Loop, Punch, Pre-roll y Click. A la derecha: un pequeño <b>medidor del master</b> con su pico (clic en el número para borrarlo), la interfaz de audio, el inspector, el botón de <b>pantallas</b> (con varios monitores), el botón de <b>sesiones</b> (la carpeta), deshacer, guardar, los atajos (<kbd>?</kbd>) y esta guía (<kbd>F1</kbd>). Arrastra la barra superior para mover la ventana; a pantalla completa baja un poco, para que al acercarte no aparezca la barra de menús de macOS.</p>
+<p>Primeros pasos: elige tu interfaz de audio (capítulo siguiente), importa WAV con <kbd>⌘I</kbd> o arrástralos desde el Finder, arma una pista y graba, luego abre la ventana Mix.</p>
+<p><b>Pantalla de sesiones</b>: al abrir Downstage, y cada vez que haces clic en la carpeta de la barra superior, ofrece <b>New session</b> (desde la consola vacía o una de tus <b>plantillas</b>), <b>Open session</b>, tus <b>sesiones recientes</b>, tus <b>plantillas de sesión</b> y la <b>Demo session</b> — una canción instrumental hecha para Downstage: 22 canales ya mezclados con grupos, VCA, efectos, outboard, automatización y marcadores, hechos para desmontarlos. Esc, o «Back to …», vuelve a la sesión en la que estabas. Antes de sustituir una sesión Downstage siempre pregunta, y si tiene cambios ofrece guardarla; salir también pregunta.</p>
+<p><b>Varias pantallas</b>: con más monitores conectados, el botón de pantallas envía Edit, Mix, FX o Rack — cualquier página que no esté ya a la vista — a pantalla completa a otro monitor, sin barra superior. Todas las pantallas trabajan sobre la misma sesión: un cambio en una aparece al momento en las demás, y un punto en la pestaña marca una página abierta en otra pantalla. La × de su esquina la cierra, y la página queda libre para otro monitor.</p>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/welcome.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/welcome.jpg" alt="Primeros pasos"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/overview.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/overview.jpg" alt="Primeros pasos" loading="lazy"></button></div>
+</section>
+<section id="audio">
+<h2>Configuración de audio</h2>
+<p>Haz clic en el botón de la interfaz en la barra superior (o en la pestaña <b>Audio</b> del inspector). Elige tu interfaz como <b>Output</b>: si también tiene entradas, se elige también como <b>Input</b>. En Mac, el micrófono y los altavoces integrados son dos dispositivos: elige ambos. El <b>Buffer</b> fija la latencia: 128 o 256 muestras para grabar, 512 o 1024 para mezclar.</p>
+<p>La elección se aplica al instante y se recuerda: la próxima vez Downstage vuelve a abrir la misma interfaz, y la recupera sola si la desconectas y la vuelves a conectar. <b>Internal</b> hace funcionar la sesión sin hardware (en silencio, sin grabación).</p>
+<ul>
+<li><b>Entradas</b>: cada canal tiene su selector de entrada; la cuadrícula del panel Audio asigna muchas pistas a la vez (arrastra por una columna o usa Assign 1:1).</li>
+<li><b>Salidas</b>: un canal suena en la mezcla principal (salidas 1-2), en sus grupos o directamente en una salida física propia (un par para los canales estéreo) con el selector <b>Out</b>.</li>
+<li><b>Salidas aux</b>: ocho envíos para auriculares y monitores, cada uno estéreo en un par o mono en una salida, pre o post fader. <kbd>⌥</kbd> clic en un interruptor los ajusta todos.</li>
+<li>Los <b>grupos</b> suenan en la mezcla principal o en su propio par de salidas.</li>
+</ul>
+<p>Se usan hasta 64 entradas y salidas, así que las interfaces grandes funcionan tal cual.</p>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/audio.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/audio.jpg" alt="Configuración de audio" loading="lazy"></button></div>
+</section>
+<section id="edit">
+<h2>Edición</h2>
+<p>Cada pista tiene una cabecera con Mute, Solo, armado (R), fase (Ø), Automatización (A) y Tomas (T). Arrastra el cuadrado de color para reordenar las pistas. <b>+ Mono</b> y <b>+ Stereo</b> añaden pistas, hasta 48; un par estéreo son dos pistas enlazadas como un solo canal, marcadas L y R.</p>
+<ul>
+<li><b>Slip / Grid</b> (<kbd>F2</kbd> / <kbd>F4</kbd>): movimientos libres o ajustados a la cuadrícula; <kbd>−</kbd> y <kbd>=</kbd> cambian su valor. La cuadrícula sigue el mapa de tempo.</li>
+<li><b>Herramientas</b>: selección (<kbd>F8</kbd>), recorte (<kbd>F6</kbd>), cuchilla (<kbd>B</kbd>).</li>
+<li><b>Clips</b>: clic para seleccionar, arrastra para mover, hacia arriba o abajo para cambiar de pista, con <kbd>⌥</kbd> arrastras una copia. Arrastra los bordes para recortar. Un clip seleccionado muestra sus tiradores de fundido.</li>
+<li><b>En el cursor</b>: <kbd>⌘E</kbd> corta, <kbd>A</kbd>/<kbd>S</kbd> recortan inicio y final, <kbd>D</kbd>/<kbd>G</kbd> fundido de entrada y de salida, <kbd>⌘F</kbd> fundido cruzado entre dos clips que se tocan.</li>
+<li><b>Zoom</b>: <kbd>R</kbd> y <kbd>T</kbd> o <kbd>⌘[</kbd> <kbd>⌘]</kbd>, ⌘ + rueda, Fit the song. La franja inferior es una vista general que se puede arrastrar.</li>
+<li><b>Automatización</b>: abre A en una pista, haz clic para añadir puntos y arrástralos; Read los reproduce, Write graba fader y pan mientras suena.</li>
+</ul>
+<p>Los clips se apilan: el más reciente queda encima y tapa el de abajo sin borrarlo. Borra el clip de arriba y el audio anterior vuelve a sonar.</p><h3>Canales estéreo, colores, medidores</h3>
+<p><b>Un canal estéreo se edita como uno solo</b>: sus dos pistas se dibujan como un bloque, con una barra que une L y R. Seleccionar, mover, recortar, hacer un fundido, cortar, borrar, hacer un bucle o normalizar un clip en un lado hace siempre lo mismo en el otro; los clips solo van de un lado izquierdo a otro izquierdo y de derecho a derecho; el comping de una toma usa la toma grabada en el otro lado en la misma pasada.</p>
+<p><b>Colores</b>: haz clic en el cuadrado de color de una pista (o de un canal en el Mix) para la paleta de 24 colores. Con varios canales seleccionados, incluido el que pulsas, el color va a todos — o <b>Spread</b> da a cada uno el color siguiente. Arrastra el cuadrado para reordenar.</p>
+<p>Cada cabecera de pista tiene un pequeño <b>medidor</b>. <b>Follow</b>, en la barra de edición, mantiene el cursor a la vista al reproducir y grabar: apagado, una página cada vez o centrado. Borrar un canal siempre pide confirmación; deshacer lo devuelve.</p>
+<p><b>Outputs</b>: el master suena en el par que elijas (1-2 si no dices otra cosa) y cada aux en su propia salida, mono o estéreo, pre o post; <b>No out</b> mantiene una mezcla fuera del hardware — un aux que solo escuchas en AFL, o un master que exportas sin oírlo.</p>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/overview.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/overview.jpg" alt="Edición" loading="lazy"></button></div>
+</section>
+<section id="clips">
+<h2>Clips: duplicar, bucle, normalizar, ganancia, cuantizar, estirar, afinación</h2>
+<p>Clic derecho en un clip, o clic en <b>▾</b> de un clip seleccionado, para sus comandos. Actúan sobre todos los clips seleccionados, y los dos lados de un par estéreo se mueven siempre juntos.</p>
+<ul>
+<li><b>Duplicate</b> (<kbd>⌘D</kbd>): una copia justo después de la selección.</li>
+<li><b>Loop…</b>: repite la selección N veces, una copia tras otra. Varios clips se repiten como un bloque y mantienen sus distancias.</li>
+<li><b>Normalize</b>: lleva el pico más alto de cada clip a 0 dBFS; <b>Clip gain…</b> ofrece también −0,3, −1, −3, −6 y −12 dBFS. Un clip estéreo mantiene una sola ganancia para los dos lados.</li>
+<li><b>Ganancia del clip</b>: de <b>−40 a +20 dB</b> en pasos de 1 dB, con el deslizador, los botones −6…+6, <kbd>⌃⇧↑</kbd> / <kbd>⌃⇧↓</kbd> o la rueda sobre la etiqueta dB del clip. La forma de onda sigue la ganancia y se vuelve roja donde los picos superarían la escala completa.</li>
+<li><b>Move to the cursor</b>, <b>Split at the cursor</b> y <b>Delete</b>.</li>
+</ul>
+<p>La ganancia del clip actúa antes del canal, así que inserts, compresores y EQ reaccionan al nuevo nivel.</p><h3>Cuantizar</h3>
+<p>Selecciona clips (o pistas) y pulsa <kbd>Q</kbd>, o elige Quantize… en el menú de un clip.</p>
+<ul>
+<li><b>Hits</b> encuentra cada ataque en los clips seleccionados y corta unos milisegundos antes; cada trozo se coloca en la rejilla, el anterior se alarga o se acorta para alcanzarlo y un fundido cruzado corto los une. Los golpes que ya están a pocos milisegundos de la rejilla se quedan donde están.</li>
+<li>Selecciona juntas todas las pistas de una batería: los ataques se buscan en todas a la vez y cada pista recibe los mismos cortes y desplazamientos, así la batería sigue en fase.</li>
+<li><b>Clip starts</b> mueve cada clip para que su inicio caiga en la rejilla — para one-shots, samples y loops.</li>
+<li><b>Grid</b> de 1/4 a 1/32 con tresillos, <b>Strength</b> (cuánto acercarse a la rejilla), <b>Swing</b> y <b>Sensitivity</b> (lo suave que puede ser un ataque para contar). Un deshacer lo deja todo como estaba.</li>
+</ul>
+<h3>Audio elástico</h3>
+<p>Mantén <kbd>⌥</kbd> y arrastra un borde del clip: en vez de recortarlo, el clip se estira o se encoge a la nueva duración y suena más lento o más rápido <b>con la misma afinación</b>. El archivo de audio no se toca nunca, y la etiqueta del clip indica el factor. <b>Elastic stretch…</b> en el menú del clip lo ajusta con exactitud, del 25 % al 400 %, con el deslizador o los botones 50…200 %; 100 % lo devuelve a como estaba. Cortar, recortar, repetir y cuantizar siguen a un clip estirado. Unos pocos puntos son invisibles; un loop de batería a media velocidad es un efecto.</p>
+<h3>Editor de afinación</h3>
+<p><b>Pitch editor…</b> en el menú del clip abre el clip en un piano roll sobre su forma de onda. <b>Detect notes</b> escucha el clip y dibuja cada nota que oye como una barra sobre la nota cantada, con la afinación medida cada 20 ms como una línea fina. Después:</p>
+<ul>
+<li><b>Arrastra una nota</b> arriba o abajo para llevarla a otra nota (hasta dos octavas). El original queda punteado detrás; el vibrato y los portamentos dentro de la nota se conservan.</li>
+<li><b>Snap to scale</b> lleva cada nota a la nota más cercana de la <b>tonalidad</b> y la <b>escala</b> elegidas al lado — cromática, mayor, menor, pentatónicas, blues, dórica, mixolidia, menor armónica — todo el clip afinado con un clic.</li>
+<li><b>Pencil</b>: dibuja la afinación que quieres directamente sobre la forma de onda; con <kbd>⇧</kbd> dibujas sobre semitonos enteros. <b>Clear curve</b> borra el dibujo, <b>Reset notes</b> devuelve cada nota a donde se cantó.</li>
+</ul>
+<p>Nada es destructivo: la corrección vive en la sesión, el clip muestra una etiqueta ♪ y suena corregido vaya donde vaya, cortado o estirado. Para una corrección que siga a la voz en directo, mientras grabas o mezclas, usa la unidad <b>Pitch Corrector</b> en un insert (ver el capítulo de las unidades).</p>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/clips.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/clips.jpg" alt="Clips: duplicar, bucle, normalizar, ganancia, cuantizar, estirar, afinación" loading="lazy"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/quantize.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/quantize.jpg" alt="Clips: duplicar, bucle, normalizar, ganancia, cuantizar, estirar, afinación" loading="lazy"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/pitch.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/pitch.jpg" alt="Clips: duplicar, bucle, normalizar, ganancia, cuantizar, estirar, afinación" loading="lazy"></button></div>
+</section>
+<section id="record">
+<h2>Grabación, tomas y comping</h2>
+<p>Arma las pistas con <b>R</b> (arrastra sobre varios botones R, o <kbd>⌥R</kbd> para todas), comprueba que cada una tenga entrada y pulsa Grabar (<kbd>⌘Espacio</kbd>, <kbd>F12</kbd> o <kbd>3</kbd> del teclado numérico).</p>
+<ul>
+<li><b>Pre-roll</b>: la reproducción arranca 1, 2 o 4 compases antes del cursor y la grabación empieza en el cursor.</li>
+<li><b>Punch libre</b>: mientras suena, Grabar entra y al pulsarlo de nuevo sale; la reproducción sigue.</li>
+<li><b>Punch automático</b>: arrastra en la regla de compases para marcar un rango y activa <b>Punch</b>. La grabación empieza y termina exactamente en sus límites (en rojo). Con Loop activado también, cada vuelta del bucle es una toma.</li>
+<li><b>Clic</b>: <kbd>C</kbd> o el botón del metrónomo. Su canal, justo después de los canales, elige sonido, salida, graves y agudos, los ocho envíos aux para los auriculares, el pan y si suena solo al grabar.</li>
+</ul>
+<p><b>No destructivo</b>: nunca se sobrescribe nada. Una grabación nueva se coloca encima; el audio anterior queda debajo y cada pasada se guarda en la lista de tomas.</p>
+<p><b>Comping</b>: haz clic en <b>T</b> en una pista para abrir sus tomas. Arrastra sobre la parte buena de cualquier toma y pulsa <b>↑ Use this</b> (o <kbd>⌥⇧↑</kbd>): ese trozo se copia encima de la pista con fundidos cortos. Haz clic en el nombre de una toma para usarla entera, renombrarla o quitarla de la lista.</p><p>Mientras grabas, el clip rojo de cada pista armada dibuja la <b>forma de onda</b> de lo que está entrando.</p>
+<p>Los <b>archivos grabados</b> llevan el nombre del canal y de la toma, para encontrarlos fácilmente en la carpeta de audio de la sesión: <code>03 Kick In - Take 01.wav</code>, y para los dos lados de un canal estéreo <code>05-06 Overheads L - Take 02.wav</code>. Un número que ya está en el disco nunca se reutiliza, así que nunca se sobrescribe nada; la toma de la lista lleva el mismo número.</p>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/edit.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/edit.jpg" alt="Grabación, tomas y comping" loading="lazy"></button></div>
+</section>
+<section id="tempo">
+<h2>Tempo, compás y clic</h2>
+<p>El campo <b>BPM</b> y el menú de compás de la barra superior muestran y cambian el tempo y el compás en el cursor. La fina regla <b>Tempo</b> sobre los compases muestra todos los cambios.</p>
+<ul>
+<li>Haz clic en un espacio vacío de la regla de tempo para añadir un cambio en ese compás; haz clic en una marca para editarla o borrarla.</li>
+<li>Compases: 4/4, 3/4, 2/4, 6/8, 5/4, 7/8, 9/8, 12/8, 2/2, 7/4, 5/8. En los compases compuestos el pulso es la corchea.</li>
+<li>Compases, cuadrícula, ajuste, clic, <kbd>1</kbd>/<kbd>2</kbd> del teclado numérico para saltar de compás y los delays sincronizados siguen todos el mapa.</li>
+</ul>
+<p>El clic acentúa el primer tiempo de cada compás y sigue el compás vigente. Elige Beep, Wood, Cowbell, Hi-hat o Rim en su canal.</p><h3>Marcadores y rango de exportación</h3><p>La regla <b>Markers</b>, entre Tempo y Bars, guarda las secciones de la canción, como las memory locations de las grandes DAW:</p><ul><li><kbd>Intro</kbd> del teclado numérico (<kbd>fn</kbd> <kbd>Retorno</kbd> o <kbd>M</kbd> en un portátil) pone un marcador en el cursor, también durante la reproducción; doble clic en la regla para añadir uno ahí.</li><li><kbd>.</kbd> número <kbd>.</kbd> salta a ese marcador (<kbd>.</kbd> <kbd>3</kbd> <kbd>.</kbd> es el tercero). Clic en un marcador para ir, arrástralo para moverlo, doble clic para renombrarlo, <kbd>⌥</kbd> clic para borrarlo.</li><li><kbd>⌘5</kbd> abre <b>Memory Locations</b>: todos los marcadores con compás y tiempo, para renombrar, llamar o borrar, y el rango de exportación.</li><li>El <b>rango de exportación</b> (banderas azules IN y OUT): durante la reproducción <kbd>↓</kbd> fija el inicio y <kbd>↑</kbd> el final, como en las grandes DAW; arrastra las banderas o haz clic derecho en la regla. La exportación lo usa cuando está definido.</li></ul><h3>Detectar el tempo</h3><p>El botón del metrónomo en la barra de edición escucha la sesión — o solo las pistas de los clips seleccionados, por ejemplo una batería — y encuentra el tempo, el pulso y el primer tiempo fuerte. <b>Steady tempo</b> es para música tocada con clic o programada: un solo tempo para toda la sesión, y con <b>Align</b> la canción se mueve (clips, tomas, automatización y marcadores juntos, nunca antes del cero) para que el primer tiempo fuerte caiga en una barra de compás. <b>Follow the performance</b> es para una banda grabada sin clic: un tempo para cada compás, así compases y rejilla siguen a la música mientras respira. Antes de aplicar se puede corregir el BPM y cambiar el compás; un deshacer lo deja todo como estaba.</p><h3>Solo reloj</h3><p>Haz clic en el indicador de tiempo de la barra superior para apartar compases y tempo — para un concierto grabado en multipista — y tener un reloj grande en horas, minutos, segundos y milisegundos; las reglas cuentan entonces minutos y segundos. La elección se guarda con la sesión; otro clic vuelve a los compases.</p>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/tempo.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/tempo.jpg" alt="Tempo, compás y clic" loading="lazy"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/detect.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/detect.jpg" alt="Tempo, compás y clic" loading="lazy"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/locations.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/locations.jpg" alt="Tempo, compás y clic" loading="lazy"></button></div>
+</section>
+<section id="mix">
+<h2>La ventana Mix</h2>
+<p>En las páginas Mix, FX y Rack la <b>barra de la canción</b> bajo la barra superior muestra toda la canción con sus marcadores, el rango de exportación y el cursor: haz clic o arrastra para moverte, clic en un marcador para saltar, clic derecho para marcadores y rango.</p>
+<p>La consola ocupa toda la altura de la ventana. Todos los canales tienen la misma estructura, de arriba abajo (un enlace estéreo es un solo canal con dos medidores):</p>
+<ul>
+<li>El <b>número</b> y ⤢, que abre el canal completo.</li>
+<li><b>In</b>, fase <b>Ø</b>, <b>link</b> con el canal siguiente, <b>Out</b> (mezcla principal o una salida física). Downstage pregunta antes de unir dos canales en un canal estéreo y antes de separarlo; los canales separados vuelven al centro.</li>
+<li><b>EQ</b>: paso alto y cuatro bandas totalmente paramétricas con los colores de una gran mesa británica; cada fila lee ganancia, frecuencia y Q. LF y HF pasan de shelf a campana. Detrás de la curva corre el analizador en tiempo real.</li>
+<li><b>Inserts 1 a 4</b> (ocho en el master): clic en uno vacío para montar una unidad, en uno ocupado para editarla, <kbd>⌥</kbd> clic para el bypass.</li>
+<li><b>FX 1–8</b> y <b>AUX 1–8</b>: los dieciséis envíos, dos filas de cuatro por tipo.</li>
+<li><b>Pan</b> y el selector de <b>VCA</b>: como en una gran mesa, un canal está en un solo VCA o en ninguno. ▲▼ o la rueda, clic en el número para la lista, <kbd>⌥</kbd> clic para quitarlo. En un canal seleccionado cambia todos los seleccionados.</li>
+<li><b>M S R</b>, el fader con el tirador fino de consola, los medidores con su escala en dB, el medidor ámbar de reducción de ganancia de sus compresores y, junto al fader, los botones de <b>ruteo</b>: <b>M</b> (mezcla principal) y <b>A B C D</b> (los grupos). Apaga M para oír un canal solo a través de sus grupos.</li>
+<li>El nombre en cinta adhesiva: doble clic para renombrar. El cuadrado de color de al lado abre la paleta de colores.</li>
+</ul>
+<p>Tras los canales viene el canal estrecho del <b>clic</b>, luego grupos, retornos de efectos, VCA, salidas aux y master. Los <b>retornos de efectos</b> son canales sin envíos FX ni fase que suenan directamente en la mezcla principal y pueden estar en un VCA; los <b>grupos</b> son canales completos; <b>salidas aux</b> y <b>master</b> comparten el canal de salida con el EQ de siete bandas. Cada canal usa las mismas secciones a la misma altura, así las filas se alinean en toda la consola.</p>
+<p><kbd>⌥</kbd> clic en un botón actúa en todos los canales, <kbd>⌥⇧</kbd> en los seleccionados, <kbd>⌘</kbd> clic en Solo para un solo exclusivo. Clic derecho en un canal para copiar y pegar sus ajustes o cargar un preset de EQ.</p>
+<p><b>Medidores</b>: todos los medidores de nivel leen picos en <b>dBFS</b>, con el 0 arriba y más espacio en la parte alta, y marcas en −6, −12, −18, −30 y −50 numeradas al lado; el fader tiene su propia escala. Un canal mono muestra el nivel después del fader y antes del pan, así una pista a plena escala lee 0 dBFS. La barra sube al instante y baja 20 dB por segundo. <b>Retención de picos</b>: cada medidor mantiene durante tres segundos el nivel más alto como una línea, roja desde 0 dBFS; el número junto al valor del fader muestra el mismo pico en dB (ámbar cerca de 0, rojo en 0 y por encima). Un clic lo borra. El medidor del master también está en la barra superior.</p>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/mix.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/mix.jpg" alt="La ventana Mix" loading="lazy"></button></div>
+</section>
+<section id="routing">
+<h2>Grupos, salidas y clic</h2>
+<ul>
+<li><b>Grupos A–D</b>: cuatro grupos estéreo. Los canales los alimentan con los botones A–D junto al fader. Cada grupo es un canal completo: fase, salida (mezcla principal o un par físico), EQ de cuatro bandas, cuatro inserts, ocho envíos FX, ocho envíos aux, balance, VCA y mute. Renómbralos con doble clic en la cinta: bus de batería, guitarras, voces, stems hacia otra máquina.</li>
+<li><b>VCA</b>: un canal, un retorno o un grupo está en un VCA. Un grupo en un VCA sigue su fader y su mute; el solo del VCA pone en solo los canales que alimentan el grupo.</li>
+<li><b>Solo</b>: canales, grupos y retornos de efectos tienen S. El solo de un canal mantiene abierto su camino: sus grupos y los retornos que alimenta (su reverb sigue). El solo de un <b>grupo</b> enciende los canales enrutados a él; el solo de un <b>retorno</b> enciende los canales que le envían señal — sus S se marcan con un contorno. <b>Clic derecho</b> (o <kbd>⌃</kbd> clic) en una S para el <b>solo safe</b>, como en las grandes DAW: el canal nunca se silencia por otro solo (lo marca un punto). En una aux el botón es <b>AFL</b>: las salidas principales suenan con la mezcla de esa aux, para oír exactamente lo que un músico tiene en los auriculares. Los solos nunca cambian las mezclas de aux.</li>
+<li><b>Salidas aux</b>: ocho salidas, estéreo en un par o mono, pre o post fader, cada una con EQ de siete bandas y cuatro inserts.</li>
+<li><b>EQ de salida</b>: salidas aux y master tienen siete bandas. El canal muestra siete deslizadores de ganancia de 60 Hz a 12 kHz; ⤢ abre la vista completa con frecuencia, Q y shelves, sobre el analizador.</li>
+<li><b>Master en las aux</b>: los ocho mandos AUX del master llevan toda la mezcla a los auriculares, antes o después del fader master según cada aux.</li>
+<li><b>Clic</b>: un canal estrecho tras los canales con encendido, sonido, salida, Rec only, graves y agudos (ganancia y frecuencia), los ocho envíos aux tomados antes de su fader (el clic en los auriculares y no en la sala) y pan.</li>
+</ul>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/groups.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/groups.jpg" alt="Grupos, salidas y clic" loading="lazy"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/buses.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/buses.jpg" alt="Grupos, salidas y clic" loading="lazy"></button></div>
+</section>
+<section id="channel">
+<h2>El canal completo</h2>
+<p>Pulsa ⤢ en cualquier canal (o clic derecho → Open channel): canales, retornos de efectos, grupos, salidas aux y master se abren en una sola ficha con todo a la vista, sin desplazarse. ‹ y › (o las flechas) pasan de uno a otro; el nombre se cambia arriba, y al lado están <b>M</b> y <b>S</b> — <b>R</b> en los canales, <b>AFL</b> en un aux — para silenciar o poner en solo sin salir de la ventana.</p>
+<ul>
+<li><b>EQ</b>: la curva sobre el espectro en tiempo real. Arrastra los puntos numerados para frecuencia y ganancia, la rueda sobre un punto cambia su Q, doble clic lo pone a cero; cada banda tiene ganancia, frecuencia y Q debajo. <b>Presets ▾</b> reúne decenas de puntos de partida por instrumento — bombo, caja, toms, hi-hat, overheads, sala, bajo, guitarra eléctrica y acústica, piano, órgano, pads, voces, cuerdas, metales, utilidades — y los tuyos.</li>
+<li><b>Inserts</b>: los cuatro puntos de insert con sus medidores; desde aquí se abre cualquier unidad.</li>
+<li><b>Entrada y salida</b>, los ocho envíos <b>FX</b> y ocho <b>aux</b>, el <b>ruteo</b> (MAIN, A–D), <b>pan</b>, <b>fader</b> y <b>VCA</b>.</li>
+</ul>
+<p><b>Copy…</b> elige qué copiar: EQ, inserts, envíos FX, envíos aux, fader y pan, VCA, salida y grupos, automatización, entrada. <b>Paste</b> lo aplica aquí; desde el menú de un canal o con <kbd>⌘⌥V</kbd> pegas en todos los canales seleccionados. <kbd>⌘⌥C</kbd> copia todo del canal seleccionado.</p>
+<h3>Notas</h3>
+<p>Bajo los cuatro inserts hay un post-it amarillo: escribe lo que el canal debe recordar — el micrófono, la toma que se queda, lo que falta por hacer. Se guarda con la sesión mientras escribes, y un canal con nota muestra un puntito amarillo en su cabecera; señálalo para leer la primera línea.</p>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/channel.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/channel.jpg" alt="El canal completo" loading="lazy"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/master.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/master.jpg" alt="El canal completo" loading="lazy"></button></div>
+</section>
+<section id="inserts">
+<h2>Inserts y rack</h2>
+<p>Cada canal, retorno de efectos, grupo, salida aux y el master tiene cuatro puntos de inserción, procesados en orden 1 → 4. Las unidades están en un único <b>rack de 64 huecos</b>, numerados del 1 al 64: cualquier unidad cabe en cualquier hueco. En un canal estéreo una unidad trabaja en estéreo con el detector enlazado, en un solo hueco.</p>
+<ul>
+<li>Monta desde un canal (clic en un insert vacío) o en la ventana Rack: elige el tipo, el destino y el punto de inserción.</li>
+<li>Un trozo de cinta de carrocero en cada unidad muestra, a rotulador, dónde está conectada.</li>
+<li>Arrastra una unidad por su asa a otro hueco para moverla o intercambiarla.</li>
+<li>Cada unidad tiene un medidor: aguja en las vintage, LED en las modernas. La dinámica y los channel strips con compresor arrancan en la reducción de ganancia; amplis, pedalera, cinta y el previo Class A 73 en la entrada (cuánto los empujas); ecualizadores, modulaciones y el resto en la salida. Haz clic en un medidor para cambiar entre reducción de ganancia (si la hay), entrada y salida.</li>
+<li>Un clic en un insert de un canal abre solo esa unidad, en su propia ventana.</li>
+</ul><p>Haz clic en un insert vacío para el menú completo: todas las unidades, agrupadas por tipo — dinámica, mastering, channel strips, amplis de guitarra, amplis de bajo, pedales y modulación, EQ y color, herramientas. Los menús de las ventanas Rack y FX se agrupan igual.</p><h3>Paneles y presets</h3>
+<p>Cada unidad está dispuesta como el hardware, en <b>bloques</b> con nombre — previo, puerta, dinámica, el EQ con una columna por banda, salida — que se mantienen enteros cuando la ventana es estrecha. El interruptor en uso está iluminado.</p>
+<p><b>Presets ▾</b> en cada unidad y cada efecto muestra los <b>presets de fábrica</b> — hasta diez por máquina, elegidos por lo que mejor sabe hacer: el VCA Comp 160 en bombo y bajo, el FET 76 en voz y caja, el truco del EQ pasivo en el bombo… — y <b>tus presets</b>. Pon nombre a los ajustes actuales y pulsa Save para guardarlos: se guardan en Documentos/Downstage/Presets y todas las sesiones los tienen. Tus presets se pueden sobrescribir (Save here) y borrar, siempre tras confirmar; los de fábrica no se pueden cambiar ni borrar.</p>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/insertmenu.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/insertmenu.jpg" alt="Inserts y rack" loading="lazy"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/rack.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/rack.jpg" alt="Inserts y rack" loading="lazy"></button></div>
+</section>
+<section id="units">
+<h2>Dinámica, mastering, channel strips y procesadores</h2>
+<p>En los menús, <b>Dynamics</b> reúne los compresores, puertas y procesadores de dinámica, <b>Mastering</b> las herramientas del bus de mezcla y del mastering (algunas se describen aquí) y <b>Channel strips</b> los canales de consola.</p>
+<ul>
+<li><b>Punch Bus 25</b>: contundente y denso; threshold, ratio, attack, release, knee, Tilt, color y mezcla.</li>
+<li><b>FET Limiter 76</b>: rapidísimo; el Input empuja, el Output fija el nivel; ratios 4, 8, 12, 20 y All buttons.</li>
+<li><b>Opto 2A</b>: nivelador óptico con su liberación lenta en dos etapas; Compress o Limit.</li>
+<li><b>Tube Limiter 670</b>: válvulas de mu variable, seis constantes de tiempo.</li>
+<li><b>Stress Comp</b>: ratios de 1:1 (solo color) a Crush, detector HP y banda, armónicos Dist 2 y Dist 3, modos Opto y Brit.</li>
+<li><b>Mix Bus Comp</b> y <b>Tube Mu</b>: el «pegamento» del bus de mezcla y de los grupos.</li>
+<li><b>VCA Comp 160</b>: compresión VCA con detector RMS, un ataque que se ajusta al transitorio, liberación rápida a velocidad constante y la rodilla suave; pensado para bombo, caja y bajo.</li>
+<li><b>Dual Dynamics 166</b>: puerta, compresor (rodilla suave, tiempos Auto) y el limitador peak-stop en una sola unidad.</li>
+<li><b>Dual Gate 201</b>: filtros paso alto y paso bajo en la llave, threshold, range, ataque desde 10 µs, hold, decay y Key listen.</li>
+<li><b>Compresor multibanda</b>: cuatro módulos uno junto a otro, uno por banda, cada uno con su vúmetro, threshold, ratio, attack, release y ganancia; los cruces coherentes en fase suman plano cuando no comprime.</li>
+<li><b>De-esser</b> (split o wide, Listen) y <b>Transient designer</b> (ataque y sustain).</li>
+<li><b>Brickwall limiter</b>: la última unidad del máster. Una anticipación de 1,5 ms baja la ganancia antes de que llegue el pico: nada pasa del techo y nada satura; Input empuja la mezcla hacia él, Release fija la suavidad con que suelta.</li>
+</ul>
+<p><b>Channel strips</b>:</p>
+<ul>
+<li><b>Desk E Channel</b>: paso alto y paso bajo de 18 dB/oct, puerta/expansor, el compresor VCA de canal y el EQ de cuatro bandas con conmutadores bell.</li>
+<li><b>Class A 88</b>: previo con transformador, paso alto, EQ de cuatro bandas y un compresor de canal suave.</li>
+<li><b>Discrete Console</b>: el previo discreto, el EQ de tres bandas con frecuencias por pasos y Q proporcional, y el compresor con el tilt del side chain.</li>
+<li><b>Live Desk UK</b> y <b>8-Bus</b>: previo, paso alto, dos shelves y dos medios barribles, del cálido británico al limpio.</li>
+<li>La <b>Channel strip</b> genérica: filtros, puerta, compresor, EQ de cuatro bandas y drive.</li>
+</ul>
+<p><b>EQ y color</b>: Passive Tube EQ, Class A 73, el magnetófono y el <b>ecualizador gráfico de 31 bandas</b>: treinta y un deslizadores a tercio de octava de 20 Hz a 20 kHz (±12 dB), un pasa-altos y un pasa-bajos; es «matched»: la curva pasa por cada deslizador y las bandas vecinas no se suman; arrastre a través de los deslizadores para dibujar la curva, ⌥ clic pone uno a cero, Flat todos. En un canal mono usa una curva; en un canal estéreo <b>Link</b> aplica una curva a los dos lados y <b>Dual</b> da a cada lado la suya (L y R eligen cuál ve) — el gráfico clásico en un envío de monitores. <b>Tools</b>: el afinador, los medidores y el generador de señal para alinear niveles y comprobar el ruteo.</p>
+<p><b>Medidores</b> (en Tools): unidades que dejan pasar el sonido intacto y muestran de qué está hecho. El <b>Spectrum analyzer</b> lee por 1/6 de octava de 20 Hz a 20 kHz con retención de picos (off, 1 s, 3 s, ∞) y nombra la frecuencia más fuerte; apunte a la pantalla para leer cualquier frecuencia, y pase a Mid / Side para ver el side como una línea. El <b>Phase scope</b> es el goniómetro: el mono es una línea vertical, una mezcla abierta una bola, lo que está fuera de fase se tumba; el correlador de abajo va de +1 a −1. El <b>Stereo image</b> muestra anchura y balance de cada octava, en rojo donde está fuera de fase. Además de los inserts 1–4 pueden ir en el punto <b>Post</b> de un canal, tras sus inserts, sin ocupar un hueco: la demo tiene los tres en el post del máster.</p><h3>Nuevas unidades y calibración</h3>
+<p>Los compresores están calibrados para pistas en torno a −18 dBFS RMS: con sus ajustes de partida quitan de 1 a 6 dB, y su color sigue limpio a niveles normales. En el <b>Opto 2A</b>, el <b>Tube Mu</b> y el <b>Feedback Comp 25</b>, <b>Limit</b> es otra cosa que Compress — una relación mucho más alta con una rodilla dura que actúa antes.</p>
+<p>Los menús se ordenan por uso. <b>Mastering</b> reúne las herramientas del bus de mezcla y del mastering: la <b>Transistor Mastering Chain</b> (la consola de transferencia a transistores — drive de entrada, filtros, un EQ de tres bandas con frecuencias por pasos, el compresor/limitador antes o después del EQ, el spreader y la salida), el <b>Mix Bus Comp</b>, el <b>Tube Mu</b>, el <b>Tube Limiter 670</b>, el <b>Two Stage Mastering Comp</b> (etapas óptica y discreta, transformador Nickel, Iron o Steel), el <b>multibanda</b>, el <b>Big Passive EQ</b>, el <b>Sheen EQ</b> con su Sky band, <b>Mid/Side y anchura</b> (graves en mono, aire en los lados), el realzador estéreo <b>Stereo Imager</b> y el <b>limitador brickwall</b>.</p>
+<ul>
+<li><b>Dynamics</b> también tiene el <b>Feedback Comp 25</b> (el compresor feedback de los años 60), el <b>Diode Bridge 54</b> (según el clásico británico de puente de diodos: puente de diodos, relaciones de 1,5 a 6:1, recovery automático, un limitador), el <b>Project Comp 3630</b> (compresor/limitador con puerta: RMS y un release rápido en el bus de batería son el bombeo del French house), el <b>Rack Dynamics Pro</b> (puerta, soft knee, low contour, enhancer, peak limiter) y la <b>dinámica Live Desk</b> (Corrective, Adaptive o Vintage, con puerta).</li>
+<li><b>Channel strips</b>: el <b>Transistor Desk</b> (la mesa londinense a transistores de finales de los 60: la entrada que se puede empujar, graves, agudos y la presencia por pasos, el compresor/limitador de canal), el canal <b>German Broadcast</b> (previo de radiodifusión, EQ de bobinas, el limitador de la consola) y el canal <b>Desk XL</b> (el dulce EQ de cuatro bandas de la consola de gira, con medios barribles y anchura variable).</li>
+<li><b>EQ y color</b>: el <b>Broadcast EQ 295</b> (EQ de radiodifusión con bobinas: Tiefen, Präsenz de 0,7 a 5,6 kHz, Höhen, corte de rumble y de agudos), el <b>Proportional Graphic 10</b> (diez bandas de octava con Q proporcional), el <b>EQ de guitarra / bajo</b> afinado por notas — elige el instrumento, la tonalidad y la escala y cada banda ofrece las notas de esa escala (cuerpo, barro, nasal, mordida y chisporroteo en una guitarra; sub, pegada, barro, gruñido y clic en un bajo), el modo Hz muestra la nota más cercana, Octave sube también la octava superior — y el <b>sampler Lo-fi</b> (frecuencias de late-80s sampler y sampler, bits, drive y el filtro de salida).</li>
+<li><b>Tools</b>: el <b>afinador</b> — cromático, o nombrando las cuerdas de una afinación de guitarra o bajo (estándar, Mi♭, drop D, DADGAD, open G y D, bajo de 4 y 5 cuerdas), con la nota, los cents en una aguja o como bandas estroboscópicas, la frecuencia y el La de referencia de 430 a 450 Hz; <b>Mute</b> silencia el canal mientras afinas, como un afinador de pedal — los medidores descritos más abajo y el generador de señal.</li>
+</ul>
+<h3>Pitch Corrector</h3>
+<p>El <b>Pitch Corrector</b>, en el grupo <b>Pedals and modulation</b> de los menús, es el afinador automático de una voz o un instrumento monódico, en cualquier insert. Oye la nota que entra y la lleva a la nota más cercana de la <b>tonalidad</b> (Key) y la <b>escala</b> (Scale) elegidas. <b>Speed</b> es lo rápido que sigue una nota nueva: 0 ms es el salto duro y robótico, 50 a 150 ms mantiene vivo el vibrato. <b>Amount</b> es cuánto se acerca la nota al objetivo, <b>Low</b> y <b>High</b> acotan el registro de la voz, para dejar en paz respiraciones y filtraciones. La pantalla lee la nota oída, la nota a la que se lleva y los cents de corrección. Para trabajar nota a nota sobre un clip grabado, la herramienta adecuada es el editor de afinación de la ventana Edit (capítulo de los clips).</p>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/unit.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/unit.jpg" alt="Dinámica, mastering, channel strips y procesadores" loading="lazy"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/processors.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/processors.jpg" alt="Dinámica, mastering, channel strips y procesadores" loading="lazy"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/mastering.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/mastering.jpg" alt="Dinámica, mastering, channel strips y procesadores" loading="lazy"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/geq.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/geq.jpg" alt="Dinámica, mastering, channel strips y procesadores" loading="lazy"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/meters.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/meters.jpg" alt="Dinámica, mastering, channel strips y procesadores" loading="lazy"></button></div>
+</section>
+<section id="amps">
+<h2>Amplis, pedalera y modulación</h2>
+<p>Monta un ampli en el insert de un canal DI de guitarra o bajo. Cada ampli tiene sus canales y controles reales, un selector <b>Cabinet</b> (o DI) y un nivel de salida; los amplis de bajo tienen además <b>Blend</b> para mezclar la DI.</p>
+<ul>
+<li><b>Brit 900 Stack</b>: canal A de limpio a crunch, canal B el lead con su recorte por diodos; gain, volumen y reverb por canal, presence, bass, middle, treble, master; 4x12 con altavoces de 25 W.</li>
+<li><b>Chime 30</b>: Normal o Top Boost, volumen hacia las EL84, treble, bass, Cut, Brilliant; 2x12 alnico.</li>
+<li><b>Blackface 85</b>: canal Normal o Vibrato, bright, ecualización con medios recortados, reverb de muelle, speed e intensity.</li>
+<li><b>Solid Chorus 120</b>: transistor y limpísimo; el chorus estéreo del canal de efectos (seco a la izquierda, modulado a la derecha) o vibrato, distorsión y reverb.</li>
+<li><b>Citrus Verb 50</b> (clean y dirty) y <b>Modena Lead</b> (clean, crunch, lead) para el high gain moderno.</li>
+<li><b>Fridge Stack 300</b>: medios de cinco posiciones, interruptores ultra-low y ultra-high. <b>Brit Bass Head</b>: valve drive, sub, medios barribles, Shape, 4x10 o 1x15. <b>Yellow Bass 500</b>: Vintage, Pre-shape y cuatro bandas.</li>
+<li><b>Pedalera multiefectos </b>: noise suppressor, compresor, overdrive/distorsión (Overdrive 1, Blues, Screamer, Dist 1, Metal, Fuzz), EQ, modulación (chorus, flanger, phaser, trémolo, vibrato), delay digital o de cinta y reverb, cada uno con su interruptor. <b>Patch</b> carga ajustes listos: Clean Chorus, Crunch, Blues Lead, Rock Lead, Metal, Ambient Swell, Funk, Shoegaze.</li>
+<li><b>Spatial Chorus</b>: la clásica caja «space», botones 1–4 y las combinaciones 1+4 y 2+4; ancha y compatible en mono.</li>
+<li><b>Rotary 122</b>: chorale, trémolo y freno con la inercia real de bocina y tambor, drive, balance y anchura.</li>
+</ul><h3>Pedalera</h3>
+<p>Seis huecos en fila, en el orden de la cadena. Cada hueco admite cualquier pedal, elegido en un menú ordenado por marca, con los controles impresos encima y su pulsador (el LED rojo se enciende cuando está activo); las flechas mueven un pedal por la cadena, y elegir un pedal pone sus controles donde están en uno nuevo.</p>
+<ul>
+<li><b>Pedales compactos</b>: las distorsiones — Dist 1, Yellow Drive, Bluesman, Overdrive 1, Metal 2; dinámica y EQ — el Sustainer 3, el Multi Comp y el EQ gráfico Graphic 7 con sus siete deslizadores; modulación — Ensemble 1, Chorus 1, Flanger 3, Phaser 3; delay y reverb — Delay 3, Echo 2, Reverb 6; el octavador Octaver 5 (Poly para acordes, Original para las notas sueltas del viejo octavador mono) y el sintetizador Synth 1 (Lead, Pad, Strings, Bell, Organ, Sweep, Pulse y Bass, moldeados por Tone/Rate, Depth y Variation); para bajo, las distorsiones Bass Driver X y Bass Drive 3 con el bajo limpio mezclado, el compresor Bass Comp X, el limitador realzador Bass Limiter 3, el EQ gráfico Bass Graphic 7 y el chorus Bass Chorus 3, cuyo Low Filter mantiene el grave seco y en el centro.</li>
+<li><b>Cajas vintage</b>: el <b>Big Fuzz</b> (Volume, Tone, Sustain), el phaser <b>Pebble</b> (Rate y Color) y el <b>Analog Memory</b> (un delay bucket-brigade con chorus o vibrato en las repeticiones; Level empuja su entrada).</li>
+<li><b>Red Squash</b> (Output, Sensitivity) y el <b>Green Drive</b> (Overdrive, Tone, Level: los medios saturan, los graves pasan limpios).</li>
+<li><b>Talkbox Synth</b>: tu guitarra — saturada como a través del tubo, o convertida en sintetizador o en voz a la octava — a través de una boca que va entre U, O, A, E e I. Sin micrófono en un insert, la boca es el control Vowel, que tu forma de tocar abre más (Talk); Gender desplaza los formantes.</li>
+<li><b>Nebula</b>: Hall, Room, Plate, Spring, Mod Echo, Infinite, Shimmer y Tremolo Verb, con Mix, Decay, Size, Delay, Lo, Hi y Mod. <b>Forever</b>: una reverb shimmer una octava, una quinta o dos octavas por encima, o una octava por debajo.</li>
+<li><b>Tape Echo</b> (los doce modos) y <b>Chorus Echo</b> (las cabezas combinadas, reverb de muelles y chorus): el eco de cinta en la cadena, conservando la señal directa.</li>
+</ul>
+<ul>
+<li><b>Rig Capture</b>: doce equipos capturados, de un limpio black-panel a un cabezal high gain moderno y a un ampli de bajo, cada uno con la pantalla con la que se capturó y equilibrado en nivel; la sección <b>Stack</b> — Gain, Definition, Clarity, Power sagging, Pick y el Compressor — el EQ de cuatro bandas, la pantalla (o directo) y su Character.</li>
+<li><b>Wah</b> (estilo wah pedal): el pedal, <b>Auto</b> — el filtro de envolvente del funk y del bajo, abierto por tu forma de tocar — o un LFO; recorrido classic, bass o wide y Q.</li>
+<li><b>Flanger</b> (estilo classic): Manual, Width, Speed, Regen (Negative para el sonido hueco) y estéreo; Mix al 50 % es el jet, al 100 % un vibrato.</li>
+<li><b>Phaser</b> (estilo classic): velocidad, profundidad, de 4 a 12 etapas, la voz Modern o Vintage.</li>
+</ul>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/amps.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/amps.jpg" alt="Amplis, pedalera y modulación" loading="lazy"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/pedalboard.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/pedalboard.jpg" alt="Amplis, pedalera y modulación" loading="lazy"></button></div>
+</section>
+<section id="fx">
+<h2>Efectos</h2>
+<p>La ventana FX contiene ocho unidades de efectos, una por bus FX. Una sesión nueva empieza con esta cadena: <b>1 Crystal Hall</b>, <b>2 Vocal Plate</b>, <b>3 Delay</b>, <b>4 Tape Echo</b>, <b>5 Quad FX</b>, <b>6 FX 90</b>, <b>7 Chorus</b>, <b>8 Shimmer</b>. Canales y grupos las alcanzan con sus envíos FX; cada retorno vuelve en un canal con EQ, cuatro inserts, ocho envíos aux y un VCA, y suena directamente en la mezcla principal. Elige otro efecto en el menú, o Empty; <b>Presets ▾</b> en cada unidad tiene sus presets de fábrica y los tuyos.</p>
+<p>Los buses son estéreo: un canal estéreo conserva su imagen, y las reverbs toman izquierda y derecha por separado. Un efecto al que nadie envía se duerme tras su cola y no gasta nada.</p>
+<ul>
+<li><b>Crystal Hall</b>, con su mando: la pantalla roja, doce teclas de programa (halls, Random Hall, plates, salas, ambience, chamber) y seis faders — RT mid, size, pre-delay, bass multiplier, treble decay y diffusion — más Spin y Wander. Cargar un programa coloca los faders, como en el mando; <kbd>⌥</kbd> clic en un fader lo devuelve al valor del programa.</li>
+<li><b>Hall</b> y <b>Plate</b>: una sala grande con primeras reflexiones, y una placa densa y brillante.</li>
+<li><b>Delay</b>: sincronizado al tempo, más oscuro en cada repetición, ping-pong.</li>
+<li><b>Chorus</b>: dos voces moduladas. <b>Flanger</b>: el jet en un envío, solo señal procesada, para que el canal y el retorno formen el peine.</li>
+<li><b>Tape Echo</b>: el clásico eco de cinta con tres cabezas, las doce posiciones, repeat rate, intensity (puede autooscilar), graves, agudos, wow y saturación.</li>
+<li><b>Shimmer</b>: una sala estilo ambient cuyas repeticiones suben una octava o una quinta; caída de hasta 30 s.</li>
+<li><b>Echo Chambers</b>: las cámaras de eco bajo el gran estudio londinense — el altavoz y los micrófonos en una sala alicatada, la distancia de los micros desde las primeras reflexiones hasta la cola, altavoz cálido o brillante — alimentadas, si quieres, a través del <b>tape feed</b>, el eco de cinta con realimentación que iba antes de la cámara.</li>
+<li><b>Quad FX</b>: la cadena de cuatro efectos — EQ, chorus, flanger o detune, delay y reverb en serie — en dieciséis programas: chorus hall, reverbs gated y reverse, flange delay, multi-tap, detune doubler y los cuatro a la vez; a 16 bits como sus primeros convertidores.</li>
+<li><b>Vintage Digital</b>: halls, plates, chambers, salas, ambience y las combinaciones chorus/eco; rev time, spin, bass multiply, treble.</li>
+<li><b>FX 90</b>: los programas clásicos de los 80, desde reverbs y gates hasta flanger, symphonic y pitch change; Vintage lo convierte en el original de 1985.</li>
+</ul>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/fx.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/fx.jpg" alt="Efectos" loading="lazy"></button></div>
+</section>
+<section id="sessions">
+<h2>Sesiones, importación y exportación</h2>
+<p>Cada sesión es una carpeta en Documentos/Downstage con <code>project.json</code> y su audio en <code>audio/</code>. Dale nombre en la barra superior; la carpeta lo sigue.</p>
+<ul>
+<li><b>Nueva</b> <kbd>⌘N</kbd> pide un nombre y desde dónde empezar: la <b>Empty console</b> (siempre está, no se puede borrar) o una de tus plantillas. <b>Abrir</b> <kbd>⌘O</kbd>, <b>Deshacer</b> <kbd>⌘Z</kbd>, rehacer <kbd>⌘⇧Z</kbd>. La carpeta de la barra superior abre la pantalla de sesiones.</li>
+<li><b>Guardar</b>: el botón de guardar ofrece <b>Save session (audio + mix)</b> — también <kbd>⌘S</kbd> — y <b>Save as template (mix only)</b>: la consola sin la canción — canales con nombres, colores, entradas, EQ, envíos y ruteo, el rack, los efectos, grupos, aux, VCA, el clic y el master — sin clips, tomas, automatización ni marcadores. Las plantillas están en Documentos/Downstage/Templates; una con el mismo nombre solo se sustituye tras confirmar; se borran desde la pantalla de sesiones.</li>
+<li>Dejar una sesión (nueva, abrir, demo, recientes) y salir de Downstage siempre piden confirmación; con cambios sin guardar puedes guardar o salir sin guardar.</li>
+<li><b>Importar</b> <kbd>⌘I</kbd> o arrastrar WAV y carpetas desde el Finder: cada archivo tiene su pista y se copia en la sesión.</li>
+<li>Las <b>grabaciones</b> llevan el nombre del canal y de la toma: <code>03 Kick - Take 01.wav</code>.</li>
+<li><b>Exportar</b> (menú File o pestaña Files) pregunta qué y cómo: la <b>mezcla estéreo</b>, un <b>stem</b> por canal (a través de sus grupos, como lo oyes) o <b>todas las salidas</b> en un archivo multicanal; <b>toda la canción</b>, el <b>rango de exportación</b> o el <b>loop</b>; <b>WAV</b> a la frecuencia de la sesión o de 44,1 a 96 kHz, a 16 bits (con dither), 24 bits o 32 bits float, o <b>MP3</b> de 128 a 320 kbps, 44,1 o 48 kHz (codificado con LAME); y cuánta cola de reverb conservar. Una barra muestra el estado real del render y de la codificación MP3, con Cancelar, y al final Mostrar en el Finder.</li>
+<li>Tus <b>presets</b> se guardan en Documentos/Downstage/Presets y todas las sesiones los tienen.</li>
+<li>Las sesiones de versiones anteriores se abren y se convierten solas.</li>
+</ul>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/files.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/files.jpg" alt="Sesiones, importación y exportación" loading="lazy"></button><button type="button" class="shot docs-shot" data-zoom="/docs/img/export.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/export.jpg" alt="Sesiones, importación y exportación" loading="lazy"></button></div>
+</section>
+<section id="keys">
+<h2>Atajos</h2>
+<p>La lista completa está detrás del botón <b>?</b> (o <kbd>?</kbd>). Los más útiles:</p>
+<ul>
+<li><kbd>Espacio</kbd> play/stop · <kbd>⌘Espacio</kbd> <kbd>F12</kbd> grabar · <kbd>Retorno</kbd> al inicio · <kbd>L</kbd> loop · <kbd>C</kbd> clic · <kbd>F1</kbd> esta guía.</li>
+<li>Intro (teclado numérico) o <kbd>M</kbd> marcador · <kbd>.</kbd> <kbd>3</kbd> <kbd>.</kbd> ir al marcador 3 · <kbd>⌘5</kbd> Memory Locations · <kbd>↓</kbd> <kbd>↑</kbd> inicio y fin de exportación durante el play.</li>
+<li><kbd>⌥M</kbd> <kbd>⌥S</kbd> <kbd>⌥R</kbd> mute, solo, armar todos los canales; añade <kbd>⇧</kbd> para los seleccionados.</li>
+<li><kbd>⌘=</kbd> Edit/Mix · <kbd>⌘1</kbd>–<kbd>⌘4</kbd> ventanas · <kbd>⌘N</kbd> sesión nueva · <kbd>⌘S</kbd> guardar · <kbd>⌘⇧N</kbd> pista nueva.</li>
+<li><kbd>⌘E</kbd> cortar · <kbd>A</kbd> <kbd>S</kbd> recortar · <kbd>D</kbd> <kbd>G</kbd> fundidos · <kbd>⌘F</kbd> fundido cruzado · <kbd>⌘D</kbd> duplicar · <kbd>Q</kbd> cuantizar · <kbd>⌃⇧↑</kbd> <kbd>⌃⇧↓</kbd> ganancia del clip ±1 dB · <kbd>R</kbd> <kbd>T</kbd> zoom.</li>
+<li><kbd>⌘⌥C</kbd> / <kbd>⌘⌥V</kbd> copiar y pegar los ajustes del canal · <kbd>⌥⇧↑</kbd> usar la parte seleccionada de una toma.</li>
+<li><kbd>⌥</kbd> clic en un control lo pone a cero, <kbd>⌘</kbd> arrastrar para ajuste fino, <kbd>⌥⇧</kbd> arrastrar un fader para mover juntos los canales seleccionados.</li>
+<li><kbd>⌥</kbd> arrastra el borde de un clip: estirado elástico · clic derecho en un clip: editor de afinación, estirado, bucle, ganancia.</li>
+</ul>
+<div class="docs-shots"><button type="button" class="shot docs-shot" data-zoom="/docs/img/keys.jpg" title="Haz clic en la imagen para ampliarla"><img src="/docs/img/keys.jpg" alt="Atajos" loading="lazy"></button></div>
+</section><section id="shortcuts" aria-labelledby="shortcuts-title">
+<h2 id="shortcuts-title">Lista completa</h2>
+<p>La misma lista que el botón ? de la app.</p>
+<p class="legend">⌘ comando · ⌥ opción · ⌃ control · ⇧ mayúsculas. En un portátil, fn Intro es el Intro del teclado numérico.</p>
+<table class="shortcut-table"><tbody><tr><th colspan="2">Ventanas</th></tr><tr><td>Alternar Edit / Mix</td><td><kbd>⌘=</kbd></td></tr><tr><td>Edit · Mix · FX · Rack</td><td><kbd>⌘1</kbd><span class="dot">·</span><kbd>⌘2</kbd><span class="dot">·</span><kbd>⌘3</kbd><span class="dot">·</span><kbd>⌘4</kbd></td></tr><tr><td>Sesión nueva · abrir · guardar</td><td><kbd>⌘N</kbd><span class="dot">·</span><kbd>⌘O</kbd><span class="dot">·</span><kbd>⌘S</kbd></td></tr><tr><td>Una página en otro monitor (pantalla completa)</td><td><kbd>botón de pantallas</kbd></td></tr><tr><td>Atajos · Guía</td><td><kbd>?</kbd><span class="dot">·</span><kbd>F1</kbd></td></tr><tr><th colspan="2">Transporte</th></tr><tr><td>Reproducir / parar</td><td><kbd>Espacio</kbd><span class="dot">·</span><kbd>0</kbd></td></tr><tr><td>Grabar</td><td><kbd>⌘Espacio</kbd><span class="dot">·</span><kbd>F12</kbd><span class="dot">·</span><kbd>3</kbd></td></tr><tr><td>Al inicio / al final</td><td><kbd>Intro</kbd><span class="dot">·</span><kbd>⌥Intro</kbd></td></tr><tr><td>Bucle</td><td><kbd>L</kbd><span class="dot">·</span><kbd>4</kbd></td></tr><tr><td>Un compás atrás / adelante (teclado numérico)</td><td><kbd>1</kbd><span class="dot">·</span><kbd>2</kbd></td></tr><tr><td>Clic activado / desactivado</td><td><kbd>C</kbd><span class="dot">·</span><kbd>7</kbd></td></tr><tr><th colspan="2">Marcadores y rango de exportación (estilo DAW)</th></tr><tr><td>Añade un marcador en el cursor</td><td><kbd>Intro (teclado numérico)</kbd><span class="dot">·</span><kbd>M</kbd></td></tr><tr><td>Ir al marcador 3</td><td><kbd>. 3 .</kbd></td></tr><tr><td>Memory Locations</td><td><kbd>⌘5</kbd></td></tr><tr><td>Inicio / fin de exportación al reproducir</td><td><kbd>↓</kbd><span class="dot">·</span><kbd>↑</kbd></td></tr><tr><td>Renombrar · borrar un marcador</td><td><kbd>doble clic</kbd><span class="dot">·</span><kbd>⌥ clic</kbd></td></tr><tr><th colspan="2">Mute, solo, armar grabación</th></tr><tr><td>Todos los canales</td><td><kbd>⌥M</kbd><span class="dot">·</span><kbd>⌥S</kbd><span class="dot">·</span><kbd>⌥R</kbd></td></tr><tr><td>Canales seleccionados</td><td><kbd>⌥⇧M</kbd><span class="dot">·</span><kbd>⌥⇧S</kbd><span class="dot">·</span><kbd>⌥⇧R</kbd></td></tr><tr><td>Clic con ⌥ / ⌥⇧</td><td><kbd>todos / seleccionados</kbd></td></tr><tr><td>Solo exclusivo</td><td><kbd>⌘ clic en S</kbd></td></tr><tr><td>Solo safe</td><td><kbd>clic derecho en S</kbd></td></tr><tr><td>Ajustar varios a la vez</td><td><kbd>arrastrar sobre M</kbd><span class="dot">·</span><kbd>S</kbd><span class="dot">·</span><kbd>R</kbd></td></tr><tr><td>Reiniciar un fader o un control</td><td><kbd>⌥ clic</kbd></td></tr><tr><td>Mover juntos los faders seleccionados</td><td><kbd>⌥⇧ arrastrar</kbd></td></tr><tr><td>Ajuste fino</td><td><kbd>⌘ arrastrar</kbd></td></tr><tr><td>Copiar / pegar ajustes de canal</td><td><kbd>⌘⌥C</kbd><span class="dot">·</span><kbd>⌘⌥V</kbd></td></tr><tr><td>Bypass de un insert</td><td><kbd>⌥ clic</kbd></td></tr><tr><td>Borrar un peak hold</td><td><kbd>clic en el pico</kbd></td></tr><tr><th colspan="2">Grabación y tomas</th></tr><tr><td>Punch in / out al reproducir</td><td><kbd>⌘Espacio</kbd><span class="dot">·</span><kbd>F12</kbd></td></tr><tr><td>Auto punch en el rango del bucle</td><td><kbd>botón Punch</kbd></td></tr><tr><td>Mostrar las tomas</td><td><kbd>T en la pista</kbd></td></tr><tr><td>Usar la parte seleccionada de una toma</td><td><kbd>⌥⇧↑</kbd></td></tr><tr><th colspan="2">Edición</th></tr><tr><td>Slip / Grid</td><td><kbd>F2</kbd><span class="dot">·</span><kbd>F4</kbd></td></tr><tr><td>Rejilla más ancha / más fina</td><td><kbd>−</kbd><span class="dot">·</span><kbd>=</kbd></td></tr><tr><td>Alejar / acercar</td><td><kbd>R</kbd><span class="dot">·</span><kbd>T</kbd><span class="dot">·</span><kbd>⌘[</kbd><span class="dot">·</span><kbd>⌘]</kbd></td></tr><tr><td>Cortar en el cursor</td><td><kbd>⌘E</kbd></td></tr><tr><td>Corte / recorte / selección</td><td><kbd>B</kbd><span class="dot">·</span><kbd>F6</kbd><span class="dot">·</span><kbd>F8</kbd></td></tr><tr><td>Recortar inicio / fin al cursor</td><td><kbd>A</kbd><span class="dot">·</span><kbd>S</kbd></td></tr><tr><td>Fundido de entrada / de salida</td><td><kbd>D</kbd><span class="dot">·</span><kbd>G</kbd></td></tr><tr><td>Fundido cruzado</td><td><kbd>⌘F</kbd></td></tr><tr><td>Copiar un clip al arrastrar</td><td><kbd>⌥ arrastrar</kbd></td></tr><tr><td>Mover un clip a otra pista</td><td><kbd>arrastrar arriba o abajo</kbd></td></tr><tr><td>Borde de la región</td><td><kbd>Tab</kbd><span class="dot">·</span><kbd>⌥Tab</kbd></td></tr><tr><td>Desplazar el clip o el cursor</td><td><kbd>← →</kbd><span class="dot">·</span><kbd>+ −</kbd></td></tr><tr><td>Pista anterior / siguiente</td><td><kbd>↑ ↓</kbd><span class="dot">·</span><kbd>P ;</kbd></td></tr><tr><td>Seleccionar todo · duplicar</td><td><kbd>⌘A</kbd><span class="dot">·</span><kbd>⌘D</kbd></td></tr><tr><td>Ganancia del clip ±1 dB</td><td><kbd>⌃⇧↑</kbd><span class="dot">·</span><kbd>⌃⇧↓</kbd></td></tr><tr><td>Comandos del clip: bucle, normalizar, ganancia, cuantizar</td><td><kbd>clic derecho en un clip</kbd></td></tr><tr><td>Cuantizar los clips seleccionados</td><td><kbd>Q</kbd></td></tr><tr><td>Detectar tempo y rejilla</td><td><kbd>metrónomo en la barra de edición</kbd></td></tr><tr><td>Colorear una pista (o las seleccionadas)</td><td><kbd>clic en su color</kbd></td></tr><tr><td>Borrar clip · borrar pista</td><td><kbd>⌫</kbd><span class="dot">·</span><kbd>⌘⌫</kbd></td></tr><tr><td>Pista nueva</td><td><kbd>⌘⇧N</kbd></td></tr></tbody></table>
+</section>
+<section id="about">
+<h2>Acerca de Downstage</h2>
+<p class="guide-brand"><img src="/assets/img/icon-512.png" width="72" height="72" alt="Downstage"></p>
+<p>Downstage — DS — es un grabador y una consola en una sola ventana, pensado para músicos, estudios y escenarios.</p>
+<ul>
+<li>Web, novedades y descargas: <a href="https://downstage.it" rel="noopener">downstage.it</a></li>
+<li>Creado por <a href="https://web.ap.it" rel="noopener">Andrea Pollastri · web.ap.it</a></li>
+</ul>
+<p>Los procesadores y efectos están modelados sobre hardware clásico. Los nombres de producto se usan solo para describir el sonido que recuerdan y pertenecen a sus propietarios.</p><h3>Sesión demo</h3><p>La canción de demostración la creó <b>Andrea Pollastri con Claude</b> para Downstage: doce stems de un tema instrumental a 116 BPM, mezclados en Downstage. Forma parte de la aplicación y sigue el mismo contrato de licencia: ábrala, desmóntela, remézclela y aprenda la consola con ella. La carpeta de la sesión contiene sus notas (README.txt).</p><h3>Licencia y condiciones de uso</h3><p>Downstage se concede bajo licencia, no se vende, según el <b>End User License Agreement and Terms of Use</b> publicado en <a href="https://downstage.it/terms.html" rel="noopener">downstage.it/terms.html</a> e incluido como License.md con la app y la imagen de disco. En resumen:</p><ul><li>Es <b>gratuito para uso personal y profesional</b>; la música que haces con él es tuya, también comercialmente.</li><li><b>No</b> puedes copiar (más allá de instalarlo y guardar una copia de seguridad), modificar, descompilar, redistribuir, compartir, vender, alquilar, incluir en otros productos ni explotar comercialmente el Software.</li><li>Se ofrece «tal cual», sin garantías; dentro de los límites de la ley el autor no responde de daños, pérdida de datos, daños auditivos o a equipos, fallos o usos indebidos.</li><li>Los nombres de productos de terceros solo identifican el sonido que inspiró un modelo; no implican afiliación ni respaldo.</li><li>Se aplica la ley italiana; el texto completo, que prevalece sobre este resumen, incluye las cláusulas aprobadas específicamente según los artículos 1341 y 1342 del Código Civil italiano.</li></ul>
+
+</section>
+      </article>
+    </div>
+  </main>
+  <dialog id="zoom" class="docs-dialog">
+    <form method="dialog"><button class="docs-x" aria-label="Cerrar">×</button></form>
+    <img alt="">
+  </dialog>
+  <footer>
+    <div class="wrap">
+      <p class="credits">Creado por <a href="https://web.ap.it" rel="author">Andrea Pollastri</a> · <a href="/docs/es/">Guía</a> · <a href="/terms.html">Licencia</a> · <a href="/privacy.html">Privacidad</a></p>
+      <p class="fine">© <span data-year>2026</span> Andrea Pollastri. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="/assets/site.js" defer></script>
+  <script src="/assets/docs.js" defer></script>
+</body>
+</html>

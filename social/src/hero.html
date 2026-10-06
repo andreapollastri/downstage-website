@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Downstage — Social hero</title>
+<link rel="stylesheet" href="promo.css">
+<style>
+  .canvas { width: 1920px; height: 1080px; }
+  .copy { left: 120px; top: 112px; width: 800px; }
+  .copy .kicker { font-size: 22px; }
+  .copy .title { font-size: 200px; margin-top: 28px; }
+  .copy .title span { display: block; }
+  .copy .script { font-size: 72px; margin: 40px 0 0 6px; }
+  .copy .lede { margin: 34px 0 0; max-width: 700px; font-size: 26px; line-height: 1.45; color: var(--dim); }
+  .copy .lede b { color: var(--ink); font-weight: 600; }
+  .copy .cta { margin-top: 40px; display: flex; align-items: center; gap: 34px; }
+  .copy .btn { height: 84px; padding: 0 40px; font-size: 38px; }
+  .copy .btn svg { width: 32px; height: 32px; }
+  .copy .url { font-size: 46px; }
+  .copy .meta { margin-top: 24px; font-size: 19px; }
+
+  .stage { left: 910px; top: 196px; width: 1180px; perspective: 1900px; }
+  .stage .monitor.main { transform: rotateY(-17deg) rotateX(4deg); transform-origin: left center; }
+  .stage .monitor.side { position: absolute; width: 600px; left: 70px; top: 560px; padding: 10px; border-radius: 16px; transform: rotateY(-10deg) rotateZ(-2deg); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 40px 80px rgba(0, 0, 0, 0.75), 0 0 50px rgba(24, 240, 255, 0.3); }
+  .stage .monitor.side img { border-radius: 8px; }
+
+  .tapes { inset: 0; pointer-events: none; }
+  .tapes .tape { position: absolute; font-size: 28px; }
+
+  .brand { right: 64px; top: 56px; display: flex; align-items: center; gap: 16px; color: var(--dim); font: 600 20px/1 var(--body); letter-spacing: 0.14em; text-transform: uppercase; }
+  .brand img { width: 60px; height: 60px; border-radius: 14px; box-shadow: 0 0 26px rgba(24, 240, 255, 0.25), 0 8px 18px rgba(0, 0, 0, 0.5); }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="layer stage">
+    <div class="monitor main"><img src="img/groups.jpg" alt=""><span class="floor"></span></div>
+  </div>
+
+  <div class="layer copy">
+    <span class="kicker"><i></i>Free for Mac · made for loud rooms</span>
+    <h1 class="title"><span class="tube">DOWN</span><span class="neon-pink">STAGE</span></h1>
+    <span class="script neon-cyan">Record. Mix. Play it loud.</span>
+    <p class="lede">A multitrack recorder and an analog-style console in one window: <b>48 channels</b>, a <b>64-slot rack</b> of classic outboard, amps and pedals, <b>8 FX buses</b> — and a price tag of <b>zero</b>.</p>
+    <div class="cta">
+      <span class="btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
+        Download free
+      </span>
+      <span class="url neon-cyan">downstage.it</span>
+    </div>
+    <p class="meta">macOS 13 Ventura or later · Apple Silicon · version 1.2.0</p>
+  </div>
+
+  <div class="layer tapes">
+    <span class="tape" style="left: 872px; top: 168px; --tilt: -5deg"><b>66</b> units</span>
+    <span class="tape" style="right: 84px; top: 930px; --tilt: 3deg"><b>0</b> subscriptions</span>
+  </div>
+</div>
+</body>
+</html>

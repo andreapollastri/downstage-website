@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Downstage — Link preview</title>
+<link rel="stylesheet" href="promo.css">
+<style>
+  /* 1200×630: the image that Facebook, LinkedIn, X, WhatsApp, Telegram and Slack show for a link. */
+  .canvas { width: 1200px; height: 630px; }
+  .copy { left: 64px; top: 58px; width: 560px; }
+  .copy .kicker { font-size: 15px; padding: 7px 16px; gap: 10px; }
+  .copy .kicker i { width: 8px; height: 8px; }
+  .copy .title { font-size: 148px; margin-top: 22px; }
+  .copy .title span { display: block; }
+  .copy .script { font-size: 50px; margin: 26px 0 0 4px; }
+  .copy .cta { margin-top: 40px; display: flex; align-items: center; gap: 24px; }
+  .copy .btn { height: 58px; padding: 0 26px; font-size: 27px; border-width: 2px; }
+  .copy .btn svg { width: 22px; height: 22px; }
+  .copy .url { font-size: 34px; }
+  .stage { left: 612px; top: 92px; width: 720px; perspective: 1400px; }
+  .stage .monitor { padding: 9px; border-radius: 14px; transform: rotateY(-18deg) rotateX(4deg); transform-origin: left center; }
+  .stage .monitor img { border-radius: 7px; }
+  .tape { position: absolute; z-index: 4; font-size: 20px; padding: 7px 14px 5px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="layer stage"><div class="monitor"><img src="img/mix.jpg" alt=""><span class="floor"></span></div></div>
+  <div class="layer copy">
+    <span class="kicker"><i></i>Free DAW for Mac</span>
+    <h1 class="title"><span class="tube">DOWN</span><span class="neon-pink">STAGE</span></h1>
+    <span class="script neon-cyan">Record. Mix. Play it loud.</span>
+    <div class="cta"><span class="btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg> Download free</span><span class="url neon-cyan">downstage.it</span></div>
+  </div>
+  <span class="tape" style="left: 640px; top: 66px; --tilt: -5deg"><b>48</b> channels</span>
+  <span class="tape" style="right: 40px; top: 528px; --tilt: 3deg"><b>64</b>-slot rack</span>
+</div>
+</body>
+</html>

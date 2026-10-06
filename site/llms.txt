@@ -1,0 +1,34 @@
+# Downstage
+
+> Downstage (DS) is a free multitrack recorder and analog-style mixing console for macOS, made by Andrea Pollastri. One window holds a DAW-style editor, a large-format console, a 64-slot rack of classic outboard, amps and meters, eight effect buses and a native CoreAudio engine. It runs on Apple Silicon Macs with macOS 13 Ventura or later; the current version is 1.2.0.
+
+Downstage is free for personal and professional use, including commercial music, but it is not open source: it is licensed, not sold, under its own License Agreement. It works offline, with no account, no telemetry and no plugins; the only connection it makes on its own is a check for updates on downstage.it, which can be turned off.
+
+What it does:
+
+- Recording: up to 48 mono or linked-stereo channels, non-destructive takes drawn while recording and named after the channel and the take, punch in on the fly or on a range, pre-roll, loop recording and comping ("Use this" on the best part of any take), a tempo and meter map or a clock only for live multitracks, a click with its own strip.
+- Editing: slip and grid, split, trim, fades and crossfades, clip gain from −40 to +20 dB, normalize, loop, duplicate, volume and pan automation, markers and an export range as on the big DAWs; tempo and grid detection from the audio (steady, or bar by bar to follow a band without a click) and quantize of hits or clip starts with strength and swing; elastic audio (a clip stretched to a new length at the same pitch, 25–400%, non-destructive); a pitch editor on every clip (detected notes to drag, snap to a key and scale, or a pitch curve drawn with a pencil on the waveform) and a Pitch Corrector unit for live voices; a notes post-it on every channel.
+- Console: a big-desk strip on every channel (high-pass, four parametric bands over a live analyser, four inserts, eight FX and eight aux sends, pan, VCA), four stereo groups, eight FX returns, eight VCAs, eight stereo aux outputs with a seven-band EQ, and the master with eight inserts; smart solo, solo safe and AFL; dBFS meters with peak hold on every strip and the master meter in the top bar; with more displays, Edit, Mix, FX or Rack full screen on each of them.
+- Rack (66 units, up to ten factory presets each plus your own): Punch Bus 25, Feedback Comp 25, FET 76, Opto 2A, Diode Bridge 54, Stress Comp, VCA Comp 160, Dual Dynamics 166, Project Comp 3630, Rack Dynamics Pro, Live Desk Dynamics, Dual Gate 201, de-esser, transient shaper; mastering — Transistor Mastering Chain, mix bus comp, Tube Mu, Tube Limiter 670, Two Stage, Big Passive EQ, Sheen EQ, mid/side, Stereo Imager, a four-band multiband, a look-ahead brickwall limiter; Desk E Channel, Class A 88, Discrete Console, Transistor Desk, German Broadcast, Desk XL, Live Desk UK and 8-Bus channel strips; Passive Tube EQ, Class A 73, Broadcast EQ 295, Proportional Graphic 10, a guitar and bass EQ tuned by note, a 31-band matched graphic EQ, a tape machine, a lo-fi sampler; Rig Capture, Brit 900 Stack, Chime 30, Blackface 85, Solid Chorus 120, Citrus Verb 50, Modena Lead guitar amps and Fridge Stack 300, Brit Bass Head, Yellow Bass 500 bass amps; a six-slot pedalboard (the compact line and bass pedals, Big Fuzz, Pebble, Analog Memory, Red Squash, Green Drive, Talkbox Synth, Nebula, Forever, Tape Echo, Chorus Echo), a multi-effect board, wah, flanger, phaser, Spatial Chorus, rotary; a tuner, a spectrum analyser, a phase scope, a stereo image meter and a signal generator.
+- Effects: Crystal Hall with its remote, hall, plate, Echo Chambers, tempo-synced delay, chorus, flanger, Tape Echo (twelve modes), shimmer, Quad FX, classic digital presets and 80s multi-FX programs, true stereo in.
+- Export: the stereo mix, one stem per channel or every output, of the song, the export range or the loop, as WAV (44.1–96 kHz, 16/24/32-bit) or MP3 (128–320 kbps).
+- A built-in guide in English, Italian, French, German, Spanish and Portuguese, and a demo session: an instrumental song created by Andrea Pollastri with Claude, mixed in 22 channels.
+
+Product names of the hardware that inspired the units belong to their owners and are used only to describe a sound; Downstage is not affiliated with or endorsed by them.
+
+## Download
+
+- [Download for Mac](https://downstage.it/download): the latest disk image (drag Downstage to Applications)
+- [Update manifest](https://downstage.it/updates/latest.json): the latest version, its notes, checksums and signature, as read by the app
+
+## Docs
+
+- [Guide](https://downstage.it/docs/): the built-in guide and the full shortcut list, in English. Same text as in the app (F1 and the ? button)
+- [Guida](https://downstage.it/docs/it/), [Guide](https://downstage.it/docs/fr/), [Anleitung](https://downstage.it/docs/de/), [Guía](https://downstage.it/docs/es/), [Guia](https://downstage.it/docs/pt/)
+- [Home page](https://downstage.it/): features, screenshots, a 24-second look at the app, the download box with version, size and SHA-256, and the FAQ
+- [License Agreement and Terms of Use](https://downstage.it/terms.html)
+- [Privacy Notice](https://downstage.it/privacy.html)
+
+## Optional
+
+- [Andrea Pollastri](https://web.ap.it): the author, and how to get in touch

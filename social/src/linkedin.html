@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Downstage — LinkedIn banner</title>
+<link rel="stylesheet" href="promo.css">
+<style>
+  /* 1584×396. The profile picture or page logo sits on the lower left: the words are on the right. */
+  .canvas { width: 1584px; height: 396px; }
+  .stage { left: 200px; top: 34px; width: 640px; perspective: 1300px; }
+  .stage .monitor { padding: 9px; border-radius: 14px; transform: rotateY(20deg) rotateX(4deg); transform-origin: right center; }
+  .stage .monitor img { border-radius: 7px; }
+  .copy { right: 72px; top: 54px; text-align: right; }
+  .copy .title { font-size: 120px; }
+  .copy .script { font-size: 46px; margin-top: 20px; transform-origin: right; }
+  .copy .line { margin-top: 28px; font: 600 21px/1 var(--body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--lime); }
+  .copy .line .url { font: 400 36px/1 var(--display); letter-spacing: 0.06em; text-transform: none; margin-left: 16px; vertical-align: -4px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="layer stage"><div class="monitor"><img src="img/mix.jpg" alt=""></div></div>
+  <div class="layer copy">
+    <h1 class="title"><span class="tube">DOWN</span><span class="neon-pink">STAGE</span></h1>
+    <span class="script neon-cyan">Record. Mix. Play it loud.</span>
+    <div class="line">A free DAW for Mac<span class="url neon-cyan">downstage.it</span></div>
+  </div>
+</div>
+</body>
+</html>

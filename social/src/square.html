@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Downstage — Square post</title>
+<link rel="stylesheet" href="promo.css">
+<style>
+  .canvas { width: 1080px; height: 1080px; }
+  .head { left: 0; right: 0; top: 64px; text-align: center; }
+  .head .title { font-size: 172px; }
+  .head .script { font-size: 62px; display: inline-block; margin-top: 18px; transform-origin: center; }
+  .stage { left: 90px; right: 90px; top: 352px; perspective: 1700px; }
+  .stage .monitor { transform: rotateX(10deg) rotateY(-5deg) rotateZ(-1deg); }
+  .fade-bottom { height: 330px; }
+  .cta { left: 64px; right: 64px; bottom: 60px; display: flex; align-items: center; justify-content: space-between; z-index: 4; }
+  .cta .btn { height: 84px; padding: 0 38px; font-size: 38px; }
+  .cta .btn svg { width: 32px; height: 32px; }
+  .cta .side { text-align: right; }
+  .cta .url { font-size: 48px; display: block; }
+  .cta .meta { font-size: 18px; margin-top: 10px; display: block; }
+  .tape { position: absolute; z-index: 4; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="layer head">
+    <h1 class="title"><span class="tube">DOWN</span><span class="neon-pink">STAGE</span></h1>
+    <span class="script neon-cyan">Record. Mix. Play it loud.</span>
+  </div>
+  <div class="layer stage">
+    <div class="monitor"><img src="img/mix.jpg" alt=""></div>
+  </div>
+  <div class="fade-bottom"></div>
+  <span class="tape" style="left: 52px; top: 364px; --tilt: -5deg"><b>48</b> channels</span>
+  <span class="tape" style="right: 50px; top: 392px; --tilt: 4deg">Free for <b>Mac</b></span>
+  <div class="layer cta">
+    <span class="btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
+      Download free
+    </span>
+    <span class="side"><span class="url neon-cyan">downstage.it</span><span class="meta">macOS 13+ · Apple Silicon</span></span>
+  </div>
+</div>
+</body>
+</html>

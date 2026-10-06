@@ -1,0 +1,204 @@
+# downstage.it — a static site, published from the site folder.
+[build]
+  publish = "site"
+  command = ""
+
+[[redirects]]
+  from = "/download"
+  to = "/downloads/Downstage-1.1.0-macOS-arm64.dmg"
+  status = 302
+
+# The disk image and the zip are in the GitHub release of their version
+# (GitHub refuses files over 100 MB in a repository): /downloads/<file> goes
+# there. Files that are in the site (the .sha256) are served as they are.
+[[redirects]]
+  from = "/downloads/:file"
+  to = "https://github.com/andreapollastri/downstage-website/releases/download/v1.1.0/:file"
+  status = 302
+
+[[redirects]]
+  from = "/license"
+  to = "/terms.html"
+  status = 301
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 301
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 301
+
+# The guide lives at /docs/ in English. The first Accept-Language tag picks
+# another language when we have it; anything else stays in English.
+# A choice in the language menu sets the nf_lang cookie, which Netlify
+# uses instead of Accept-Language.
+[[redirects]]
+  from = "/guide"
+  to = "/docs/it/"
+  status = 302
+  conditions = {Language = ["it", "it-IT"]}
+
+[[redirects]]
+  from = "/guide"
+  to = "/docs/fr/"
+  status = 302
+  conditions = {Language = ["fr", "fr-FR", "fr-CA", "fr-BE", "fr-CH"]}
+
+[[redirects]]
+  from = "/guide"
+  to = "/docs/de/"
+  status = 302
+  conditions = {Language = ["de", "de-DE", "de-AT", "de-CH"]}
+
+[[redirects]]
+  from = "/guide"
+  to = "/docs/es/"
+  status = 302
+  conditions = {Language = ["es", "es-ES", "es-MX", "es-AR"]}
+
+[[redirects]]
+  from = "/guide"
+  to = "/docs/pt/"
+  status = 302
+  conditions = {Language = ["pt", "pt-BR", "pt-PT"]}
+
+[[redirects]]
+  from = "/guide"
+  to = "/docs/"
+  status = 301
+
+[[redirects]]
+  from = "/docs"
+  to = "/docs/it/"
+  status = 302
+  force = true
+  conditions = {Language = ["it", "it-IT"]}
+
+[[redirects]]
+  from = "/docs/"
+  to = "/docs/it/"
+  status = 302
+  force = true
+  conditions = {Language = ["it", "it-IT"]}
+
+[[redirects]]
+  from = "/docs"
+  to = "/docs/fr/"
+  status = 302
+  force = true
+  conditions = {Language = ["fr", "fr-FR", "fr-CA", "fr-BE", "fr-CH"]}
+
+[[redirects]]
+  from = "/docs/"
+  to = "/docs/fr/"
+  status = 302
+  force = true
+  conditions = {Language = ["fr", "fr-FR", "fr-CA", "fr-BE", "fr-CH"]}
+
+[[redirects]]
+  from = "/docs"
+  to = "/docs/de/"
+  status = 302
+  force = true
+  conditions = {Language = ["de", "de-DE", "de-AT", "de-CH"]}
+
+[[redirects]]
+  from = "/docs/"
+  to = "/docs/de/"
+  status = 302
+  force = true
+  conditions = {Language = ["de", "de-DE", "de-AT", "de-CH"]}
+
+[[redirects]]
+  from = "/docs"
+  to = "/docs/es/"
+  status = 302
+  force = true
+  conditions = {Language = ["es", "es-ES", "es-MX", "es-AR"]}
+
+[[redirects]]
+  from = "/docs/"
+  to = "/docs/es/"
+  status = 302
+  force = true
+  conditions = {Language = ["es", "es-ES", "es-MX", "es-AR"]}
+
+[[redirects]]
+  from = "/docs"
+  to = "/docs/pt/"
+  status = 302
+  force = true
+  conditions = {Language = ["pt", "pt-BR", "pt-PT"]}
+
+[[redirects]]
+  from = "/docs/"
+  to = "/docs/pt/"
+  status = 302
+  force = true
+  conditions = {Language = ["pt", "pt-BR", "pt-PT"]}
+
+[[redirects]]
+  from = "/docs/en"
+  to = "/docs/"
+  status = 301
+
+[[redirects]]
+  from = "/docs/en/"
+  to = "/docs/"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    # stats.misterdev.it: the visit counter in every page (its script, its requests, its no-script pixel).
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https://stats.misterdev.it; style-src 'self' 'unsafe-inline'; script-src 'self' https://stats.misterdev.it; connect-src 'self' https://stats.misterdev.it; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/downloads/*.dmg"
+  [headers.values]
+    Content-Type = "application/x-apple-diskimage"
+    Content-Disposition = "attachment"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/downloads/*.zip"
+  [headers.values]
+    Content-Type = "application/zip"
+    Content-Disposition = "attachment"
+    Cache-Control = "public, max-age=86400"
+
+# The update manifest the app reads: never cached, so a new release is seen at once.
+[[headers]]
+  for = "/updates/*"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    X-Robots-Tag = "noindex"
+
+# Checksums and binaries are for people and the app, not for search results.
+[[headers]]
+  for = "/downloads/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json; charset=utf-8"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"

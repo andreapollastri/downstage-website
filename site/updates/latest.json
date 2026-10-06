@@ -1,0 +1,18 @@
+{
+ "version": "1.1.0",
+ "date": "2026-10-08",
+ "notes": "Downstage 1.1: a pedalboard with 33 classic stompboxes; a mastering section (Abbey Road TG chain, Shadow Hills, Massive Passive, Maag); Lexicon 480L with its LARC, Quadraverb and Abbey Road Chambers; Kemper, a tuner and a note-tuned EQ; EMI, Siemens, Midas, API and Golden Age units; 600+ presets; tempo detection and quantize; the waveform while recording; pages on extra displays; session templates; new meters.",
+ "minimumSystemVersion": "13.0",
+ "arch": "arm64",
+ "zip": {
+  "url": "https://downstage.it/downloads/Downstage-1.1.0-macOS-arm64.zip",
+  "sha256": "bbc2bc8f553751b0c6cb1bc3f391eb65cff52ee1ddbdb7c685fe362148557034",
+  "size": 133988626
+ },
+ "dmg": {
+  "url": "https://downstage.it/downloads/Downstage-1.1.0-macOS-arm64.dmg",
+  "sha256": "5f0b88f9111f51a065b955212620024d15012c5bd33ed7840aaa87a85888a621",
+  "size": 137965425
+ },
+ "signature": "9ioum9BasLG9fP6hzDz4ICjGTt3Vqz6jjPAl/8HJ780oqowYPHM4S9CMn3BAK9qyS0wpzl1QUwpjTV/Os1AWBw=="
+}

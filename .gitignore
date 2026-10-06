@@ -1,0 +1,6 @@
+# The builds are deployed with the site but not committed: GitHub refuses
+# files over 100 MB. Their checksums and updates/latest.json are committed.
+site/downloads/*.dmg
+site/downloads/*.zip
+.netlify/
+.DS_Store
