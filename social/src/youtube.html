@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Downstage — YouTube banner</title>
+<link rel="stylesheet" href="promo.css">
+<style>
+  /* 2560×1440. Every device shows the middle 1546×423 (x 507–2053, y 508–931); TVs show it all. */
+  .canvas { width: 2560px; height: 1440px; }
+  .left { left: -560px; top: 360px; width: 1080px; perspective: 2000px; }
+  .left .monitor { transform: rotateY(26deg) rotateX(4deg); transform-origin: right center; }
+  .right { right: -560px; top: 360px; width: 1080px; perspective: 2000px; }
+  .right .monitor { transform: rotateY(-26deg) rotateX(4deg); transform-origin: left center; }
+  .copy { left: 0; right: 0; top: 524px; text-align: center; }
+  .copy .title { font-size: 214px; }
+  .copy .script { display: inline-block; font-size: 72px; margin-top: 24px; transform-origin: center; }
+  .copy .line { margin-top: 30px; font: 600 28px/1 var(--body); letter-spacing: 0.16em; text-transform: uppercase; color: var(--lime); }
+  .copy .line .url { font: 400 50px/1 var(--display); letter-spacing: 0.06em; text-transform: none; margin-left: 22px; vertical-align: -6px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="layer left"><div class="monitor"><img src="img/mix.jpg" alt=""></div></div>
+  <div class="layer right"><div class="monitor"><img src="img/groups.jpg" alt=""></div></div>
+  <div class="layer copy">
+    <h1 class="title"><span class="tube">DOWN</span><span class="neon-pink">STAGE</span></h1>
+    <span class="script neon-cyan">Record. Mix. Play it loud.</span>
+    <div class="line">A free DAW for Mac<span class="url neon-cyan">downstage.it</span></div>
+  </div>
+</div>
+</body>
+</html>

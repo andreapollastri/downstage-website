@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Downstage — Instagram post</title>
+<link rel="stylesheet" href="promo.css">
+<style>
+  .canvas { width: 1080px; height: 1350px; }
+  .top { left: 64px; right: 64px; top: 60px; display: flex; justify-content: space-between; align-items: center; }
+  .top .kicker { font-size: 21px; }
+  .top .brand { display: flex; align-items: center; gap: 14px; color: var(--dim); font: 600 21px/1 var(--body); letter-spacing: 0.14em; text-transform: uppercase; }
+  .top .brand img { width: 64px; height: 64px; border-radius: 15px; box-shadow: 0 0 26px rgba(24, 240, 255, 0.25), 0 8px 18px rgba(0, 0, 0, 0.5); }
+
+  .head { left: 0; right: 0; top: 152px; text-align: center; }
+  .head .title { font-size: 178px; }
+  .head .script { font-size: 70px; display: inline-block; margin-top: 22px; transform-origin: center; }
+
+  .stage { left: 76px; right: 76px; top: 446px; perspective: 1700px; }
+  .stage .monitor { transform: rotateX(8deg) rotateY(-6deg) rotateZ(-1deg); }
+  .stage .back { position: absolute; width: 74%; right: -90px; top: -36px; opacity: 0.55; filter: saturate(0.8); transform: rotateY(-14deg) rotateZ(3deg); }
+
+  .tapes { left: 0; right: 0; top: 0; height: 100%; pointer-events: none; }
+  .tapes .tape { position: absolute; }
+
+  .cta { left: 0; right: 0; bottom: 74px; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+  .cta .btn { height: 92px; padding: 0 46px; font-size: 44px; }
+  .cta .btn svg { width: 36px; height: 36px; }
+  .cta .line { display: flex; align-items: baseline; gap: 22px; }
+  .cta .url { font-size: 46px; }
+  .cta .meta { font-size: 21px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="layer top">
+    <span class="kicker"><i></i>Free for Mac</span>
+    <span class="brand">Version 1.2.0<img src="img/icon-512.png" alt=""></span>
+  </div>
+
+  <div class="layer head">
+    <h1 class="title"><span class="tube">DOWN</span><span class="neon-pink">STAGE</span></h1>
+    <span class="script neon-cyan">Record. Mix. Play it loud.</span>
+  </div>
+
+  <div class="layer stage">
+    <div class="monitor"><img src="img/mix.jpg" alt=""><span class="floor"></span></div>
+  </div>
+
+  <div class="layer tapes">
+    <span class="tape" style="left: 40px; top: 446px; --tilt: -5deg"><b>48</b> channels</span>
+    <span class="tape" style="right: 36px; top: 486px; --tilt: 4deg"><b>64</b>-slot rack</span>
+    <span class="tape" style="left: 52px; top: 1004px; --tilt: 3deg"><b>8</b> FX buses</span>
+    <span class="tape" style="right: 44px; top: 990px; --tilt: -4deg"><b>0</b> subscriptions</span>
+  </div>
+
+  <div class="layer cta">
+    <span class="btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
+      Download free for Mac
+    </span>
+    <div class="line"><span class="url neon-cyan">downstage.it</span></div>
+    <span class="meta">macOS 13 Ventura or later · Apple Silicon</span>
+  </div>
+</div>
+</body>
+</html>

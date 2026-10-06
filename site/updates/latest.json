@@ -1,0 +1,18 @@
+{
+ "version": "1.2.0",
+ "date": "2026-10-08",
+ "notes": "Downstage 1.2: elastic audio (stretch a clip to a new length at the same pitch, without touching the file); a pitch editor on every clip (detect the notes, drag them, snap to a key and scale, or draw the pitch with a pencil on the waveform) and a Pitch Corrector unit for live voices; a notes post-it on every channel; the master and every aux patched to any output pair, or to No out; audio streamed from a disk cache instead of filling the memory; exports that stream to disk; an engine that follows device and sample-rate changes and restarts itself; the waveform of every clip drawn right.",
+ "minimumSystemVersion": "13.0",
+ "arch": "arm64",
+ "zip": {
+  "url": "https://downstage.it/downloads/Downstage-1.2.0-macOS-arm64.zip",
+  "sha256": "fc09cfdc5459d40c5c86e082d8cd39c15a58e71e7db231a0ebe982dbb06e2ebc",
+  "size": 135085939
+ },
+ "dmg": {
+  "url": "https://downstage.it/downloads/Downstage-1.2.0-macOS-arm64.dmg",
+  "sha256": "9320fc965558dbbcf6bae083f4ffb968216f73a9e7f386bbc03896ee54c9943a",
+  "size": 138748542
+ },
+ "signature": "Bn+OhO16gh6RSg4l/yiv2CpyDvl9sWJ7XcHXiJNvn6dgY91y6SYCzHzrsKOk6Ko4KVsrOjXY2ohBdu0aVIccAQ=="
+}
