@@ -1,5 +1,5 @@
-/* Downstage — neon rock'n'roll. No web fonts and no third-party requests:
-   system faces only, so nothing about visitors leaves the page. */
+/* Downstage — neon rock'n'roll. No web fonts: system faces only.
+   Visit counts are sent by the stats script in each page. */
 
 :root {
   --bg: #07060b;
