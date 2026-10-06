@@ -1,0 +1,32 @@
+# Downstage
+
+> Downstage (DS) is a free multitrack recorder and analog-style mixing console for macOS, made by Andrea Pollastri. One window holds a Pro Tools-style editor, a large-format console, a 64-slot rack of classic outboard, amps and meters, eight effect buses and a native CoreAudio engine. It runs on Apple Silicon Macs with macOS 13 Ventura or later.
+
+Downstage is free for personal and professional use, including commercial music, but it is not open source: it is licensed, not sold, under its own License Agreement. It works offline, with no account, no telemetry and no plugins; the only connection it makes on its own is a check for updates on downstage.it, which can be turned off.
+
+What it does:
+
+- Recording: up to 48 mono or linked-stereo channels, non-destructive takes, punch in on the fly or on a range, pre-roll, loop recording and comping ("Use this" on the best part of any take), a tempo and meter map, a click with its own strip.
+- Editing: slip and grid, split, trim, fades and crossfades, clip gain from −40 to +20 dB, normalize, loop, duplicate, volume and pan automation, markers and an export range as in Pro Tools.
+- Console: an SSL-style strip on every channel (high-pass, four parametric bands over a live analyser, four inserts, eight FX and eight aux sends, pan, VCA), four stereo groups, eight FX returns, eight VCAs, eight stereo aux outputs with a seven-band EQ, and the master with eight inserts; smart solo, solo safe and AFL; narrow views and an Overview page with the rack, the effects and the whole console on one screen; peak hold on every meter.
+- Rack (41 units): API 2500, 1176, LA-2A, Fairchild 670, Distressor, SSL bus, Manley Vari-Mu, dbx 160, dbx 166, Drawmer DS201 gate, a four-band multiband, de-esser, transient designer, a look-ahead brickwall limiter; SSL 4000 E, Neve 88RS, API, Soundcraft and Mackie channel strips; Pultec EQP-1A, Neve 1073, a 31-band matched graphic EQ, a tape machine; Marshall, Vox, Fender, Roland, Orange, Brunetti guitar amps and Ampeg, Ashdown, Markbass bass amps; a multi-effect pedalboard, Dimension D, Leslie; a spectrum analyser, a phase scope and a stereo image meter; a signal generator.
+- Effects: hall, plate, tempo-synced delay, chorus, Space Echo (twelve modes), shimmer, Lexicon-style presets and SPX-style programs, true stereo in.
+- Export: the stereo mix, one stem per channel or every output, of the song, the export range or the loop, as WAV (44.1–96 kHz, 16/24/32-bit) or MP3 (128–320 kbps).
+- A built-in guide in English, Italian, French, German, Spanish and Portuguese, and a demo session: an instrumental song created by Andrea Pollastri with Claude, mixed in 22 channels.
+
+Product names of the hardware that inspired the units belong to their owners and are used only to describe a sound; Downstage is not affiliated with or endorsed by them.
+
+## Download
+
+- [Download for Mac](https://downstage.it/download): the latest disk image (drag Downstage to Applications)
+- [Update manifest](https://downstage.it/updates/latest.json): the latest version, its notes, checksums and signature, as read by the app
+
+## Docs
+
+- [Home page](https://downstage.it/): features, screenshots, the download box with version, size and SHA-256, and the FAQ
+- [License Agreement and Terms of Use](https://downstage.it/terms.html)
+- [Privacy Notice](https://downstage.it/privacy.html)
+
+## Optional
+
+- [Andrea Pollastri](https://web.ap.it): the author, and how to get in touch
