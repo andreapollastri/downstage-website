@@ -10,8 +10,13 @@ site/                    what Netlify publishes
   llms.txt               a plain summary for language models (llmstxt.org)
   downloads/             the .sha256 of the current disk image and zip
   updates/latest.json    the update manifest, signed with the update key
+  site.webmanifest       name, colours and icons of the site
+  assets/img/og.jpg      the preview shown when a link to the site is shared
 netlify.toml             publish folder, redirects and headers
+social/                  images to promote Downstage on social networks (not published)
 ```
+
+The home page carries the search-engine basics: title and description, canonical address, Open Graph and X card tags with `og.jpg`, and structured data (schema.org `SoftwareApplication`) with the version, the size of the disk image and the date, which the release updates together with the download box and the sitemap. `social/` holds the posts, stories, carousel, covers, profile picture and link preview in every size, the HTML they are drawn from, and the captions: see `social/README.md`.
 
 Netlify deploys this repository from GitHub on every push to `main` (publish directory `site`, no build command, both from `netlify.toml`).
 
@@ -27,7 +32,7 @@ node scripts/release.mjs --notes "What changed"
 cd ../downstage-website && git add -A && git commit -m "Downstage <version>" && git push
 ```
 
-`release.mjs` checks that the app is that version, notarized, and that its audio engine passes the self-test; makes the disk image (signed and notarized too) and the zip; uploads both to the GitHub release `v<version>`; and writes here their checksums, `site/updates/latest.json` signed with the update key, the download box, the `/download` redirect and the release the `/downloads/` rule points at. The push publishes it.
+`release.mjs` checks that the app is that version, notarized, and that its audio engine passes the self-test; makes the disk image (signed and notarized too) and the zip; uploads both to the GitHub release `v<version>`; and writes here their checksums, `site/updates/latest.json` signed with the update key, the download box and the structured data of the home page, the sitemap date, the `/download` redirect and the release the `/downloads/` rule points at. The push publishes it.
 
 The update key is created once with `node scripts/release.mjs --keygen` in the app repository: the private key stays in `~/.downstage/update-signing-key.pem` (back it up, never commit it), the public key ships in the app. Installed copies only accept updates signed with it. Signing and notarization use the Developer ID certificate in the keychain and the notarytool profile `downstage-notary`.
 
