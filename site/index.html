@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Downstage — Free DAW for Mac: multitrack recorder and analog console</title>
-  <meta name="description" content="Downstage is a free DAW for Mac: a multitrack recorder and an analog-style mixing console with 48 channels, big-desk strips, 8 FX buses, a 64-slot rack of 66 compressors, mastering tools, console strips and amps, a 33-pedal board, tempo detection and quantize.">
+  <meta name="description" content="Downstage is a free DAW for Mac: a multitrack recorder and an analog-style mixing console with 48 channels, big-desk strips, 8 FX buses, a 64-slot rack of 66 compressors, mastering tools, console strips and amps, a 33-pedal board, tempo detection, quantize, Mackie Control and HUI surfaces and an AI mixing assistant.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="Andrea Pollastri">
   <meta name="application-name" content="Downstage">
@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="Downstage">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Downstage — Record. Mix. Play it loud. A free DAW for Mac">
-  <meta property="og:description" content="A free multitrack recorder and analog-style mixing console for Mac: 48 channels, 8 FX buses, a 64-slot rack of 66 classic units, 33 pedals, tempo detection and quantize.">
+  <meta property="og:description" content="A free multitrack recorder and analog-style mixing console for Mac: 48 channels, 8 FX buses, a 64-slot rack of 66 classic units, 33 pedals, control surfaces and an AI mixing assistant.">
   <meta property="og:url" content="https://downstage.it/">
   <meta property="og:image" content="https://downstage.it/assets/img/og.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -27,7 +27,7 @@
   <meta property="og:image:alt" content="Downstage, a free DAW for Mac: its mixing console with channel strips, inserts, sends and faders. Record. Mix. Play it loud.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Downstage — Record. Mix. Play it loud. A free DAW for Mac">
-  <meta name="twitter:description" content="A free multitrack recorder and analog-style mixing console for Mac: 48 channels, 8 FX buses, a 64-slot rack of 66 classic units, 33 pedals, tempo detection and quantize.">
+  <meta name="twitter:description" content="A free multitrack recorder and analog-style mixing console for Mac: 48 channels, 8 FX buses, a 64-slot rack of 66 classic units, 33 pedals, control surfaces and an AI mixing assistant.">
   <meta name="twitter:image" content="https://downstage.it/assets/img/og.jpg">
   <meta name="twitter:image:alt" content="Downstage, a free DAW for Mac: its mixing console with channel strips, inserts, sends and faders.">
   <script type="application/ld+json">
@@ -53,16 +53,16 @@
         "@id": "https://downstage.it/#app",
         "name": "Downstage",
         "alternateName": "DS",
-        "description": "A free multitrack recorder and analog-style mixing console for macOS: 48 channels with big-desk strips, four stereo groups, eight VCAs, eight FX buses, eight cue mixes, a 64-slot rack of 66 units, a 33-pedal board, tempo detection and quantize.",
+        "description": "A free multitrack recorder and analog-style mixing console for macOS: 48 channels with big-desk strips, four stereo groups, eight VCAs, eight FX buses, eight cue mixes, a 64-slot rack of 66 units, a 33-pedal board, tempo detection, quantize, Mackie Control and HUI surfaces and an AI mixing assistant.",
         "url": "https://downstage.it/",
         "applicationCategory": "MultimediaApplication",
         "applicationSubCategory": "Digital audio workstation",
         "operatingSystem": "macOS 13 Ventura or later",
         "processorRequirements": "Apple Silicon (arm64)",
-        "softwareVersion": "1.3.0",
+        "softwareVersion": "1.3.1",
         "datePublished": "2026-10-06",
         "dateModified": "2026-10-18",
-        "fileSize": "134.5 MB",
+        "fileSize": "134.2 MB",
         "downloadUrl": "https://downstage.it/download",
         "license": "https://downstage.it/terms.html",
         "isAccessibleForFree": true,
@@ -71,6 +71,7 @@
         "image": "https://downstage.it/assets/img/og.jpg",
         "screenshot": [
           "https://downstage.it/assets/img/mix.jpg",
+          "https://downstage.it/assets/img/assistant.jpg",
           "https://downstage.it/assets/img/edit.jpg",
           "https://downstage.it/assets/img/pedalboard.jpg",
           "https://downstage.it/assets/img/mastering.jpg",
@@ -78,7 +79,9 @@
           "https://downstage.it/assets/img/channel.jpg"
         ],
         "featureList": [
-          "Up to 48 mono or linked-stereo channels",
+          "Up to 48 mono or linked-stereo channels, a stereo channel in one track slot",
+          "New sessions empty, from built-in 8, 16, 24, 32 and 48-track consoles or from your own templates; an input monitor switch on every track",
+          "An AI mixing assistant on Claude, GPT, Gemini or any OpenAI-compatible service or local server, with your own API key: it measures the channels and the mix, reads the console and proposes a plan of moves (faders, pans, EQ, sends, routing, inserts with presets, effect buses, clip gain, fades, trims) applied as one undo step",
           "Non-destructive takes drawn while recording, punch-in, pre-roll, loop recording and comping",
           "Tempo and grid detection from the audio, steady or bar by bar, and quantize of hits or clip starts",
           "Elastic audio: a clip stretched or shrunk to a new length at the same pitch, non-destructively",
@@ -109,6 +112,7 @@
       <a class="brand" href="#top" aria-label="Downstage home"><img src="assets/img/icon-512.png" alt=""><b>DOWNSTAGE</b></a>
       <nav class="nav" aria-label="Main">
         <a href="#console">Console</a>
+        <a href="#assistant">Assistant</a>
         <a href="#surfaces">Controllers</a>
         <a href="#record">Record</a>
         <a href="#rack">Rack</a>
@@ -126,25 +130,25 @@
       <div class="wrap">
         <span class="kicker"><i></i>Free DAW for Mac · made for loud rooms</span>
         <a class="newbadge" href="#inside">
-          <b>New in 1.2</b>
-          <span>Pitch editor</span>
-          <span>Elastic audio</span>
-          <span>Channel notes</span>
-          <span>Output patch</span>
-          <span>Lighter engine</span>
+          <b>New in 1.3</b>
+          <span>AI mixing assistant</span>
+          <span>Mackie &amp; HUI surfaces</span>
+          <span>8 to 48-track templates</span>
+          <span>Stereo in one slot</span>
+          <span>Input monitor</span>
         </a>
         <h1><span class="tube flicker">DOWN</span><span class="neon-pink">STAGE</span></h1>
         <span class="script neon-cyan flicker-slow">Record. Mix. Play it loud.</span>
         <div class="hero-grid">
           <div>
-            <p class="lede">A multitrack recorder and an analog-style console in one window. <b>48 channels</b>, a desk that lines up like the real thing, a <b>64-slot rack</b> of 66 classic units, a <b>33-pedal board</b>, tempo detection, quantize, a page on every screen — and a price tag of <b>zero</b>.</p>
+            <p class="lede">A multitrack recorder and an analog-style console in one window. <b>48 channels</b>, a desk that lines up like the real thing, a <b>64-slot rack</b> of 66 classic units, a <b>33-pedal board</b>, tempo detection, quantize, an <b>AI mixing assistant</b>, motorized faders under your hands, a page on every screen — and a price tag of <b>zero</b>.</p>
             <div class="cta">
               <a class="btn" href="#download">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
                 Download free for Mac
               </a>
             </div>
-            <p class="meta"><span>macOS 13 Ventura or later</span><span>Apple Silicon</span><span>Version 1.2.0</span></p>
+            <p class="meta"><span>macOS 13 Ventura or later</span><span>Apple Silicon</span><span>Version 1.3.0</span></p>
           </div>
           <div class="monitor"><img src="assets/img/mix.jpg" alt="The Downstage console: channel strips with EQ, inserts, sends, VCA selectors and faders" width="1400" height="875" fetchpriority="high"></div>
         </div>
@@ -153,8 +157,8 @@
 
     <div class="marquee" aria-hidden="true">
       <div class="track">
-        <span>48 CHANNELS</span><span>✦</span><span>65 UNITS</span><span>✦</span><span>33 STOMPBOXES</span><span>✦</span><span>CRYSTAL HALL + remote</span><span>✦</span><span>MASTERING CHAIN</span><span>✦</span><span>TEMPO DETECTION</span><span>✦</span><span>QUANTIZE</span><span>✦</span><span>PITCH EDITOR</span><span>✦</span><span>ELASTIC AUDIO</span><span>✦</span><span>EVERY SCREEN</span><span>✦</span><span>600+ PRESETS</span><span>✦</span><span>0 SUBSCRIPTIONS</span><span>✦</span>
-        <span>48 CHANNELS</span><span>✦</span><span>65 UNITS</span><span>✦</span><span>33 STOMPBOXES</span><span>✦</span><span>CRYSTAL HALL + remote</span><span>✦</span><span>MASTERING CHAIN</span><span>✦</span><span>TEMPO DETECTION</span><span>✦</span><span>QUANTIZE</span><span>✦</span><span>PITCH EDITOR</span><span>✦</span><span>ELASTIC AUDIO</span><span>✦</span><span>EVERY SCREEN</span><span>✦</span><span>600+ PRESETS</span><span>✦</span><span>0 SUBSCRIPTIONS</span><span>✦</span>
+        <span>48 CHANNELS</span><span>✦</span><span>65 UNITS</span><span>✦</span><span>33 STOMPBOXES</span><span>✦</span><span>CRYSTAL HALL + remote</span><span>✦</span><span>MASTERING CHAIN</span><span>✦</span><span>TEMPO DETECTION</span><span>✦</span><span>QUANTIZE</span><span>✦</span><span>PITCH EDITOR</span><span>✦</span><span>ELASTIC AUDIO</span><span>✦</span><span>AI ASSISTANT</span><span>✦</span><span>MACKIE + HUI</span><span>✦</span><span>EVERY SCREEN</span><span>✦</span><span>600+ PRESETS</span><span>✦</span><span>0 SUBSCRIPTIONS</span><span>✦</span>
+        <span>48 CHANNELS</span><span>✦</span><span>65 UNITS</span><span>✦</span><span>33 STOMPBOXES</span><span>✦</span><span>CRYSTAL HALL + remote</span><span>✦</span><span>MASTERING CHAIN</span><span>✦</span><span>TEMPO DETECTION</span><span>✦</span><span>QUANTIZE</span><span>✦</span><span>PITCH EDITOR</span><span>✦</span><span>ELASTIC AUDIO</span><span>✦</span><span>AI ASSISTANT</span><span>✦</span><span>MACKIE + HUI</span><span>✦</span><span>EVERY SCREEN</span><span>✦</span><span>600+ PRESETS</span><span>✦</span><span>0 SUBSCRIPTIONS</span><span>✦</span>
       </div>
     </div>
 
@@ -163,17 +167,18 @@
     <section class="section" id="inside">
       <div class="wrap">
         <div class="section-head wide">
-          <span class="eyebrow">What's inside · new in Downstage&nbsp;1.2</span>
+          <span class="eyebrow">What's inside · new in Downstage&nbsp;1.3</span>
           <h2 class="neon-lime">A WHOLE STUDIO. ONE WINDOW.</h2>
           <p>The desk, the outboard rack, the pedalboard on the floor, the reverb units in the machine room and the mastering chain down the corridor — all in one app, all free, all in the same session.</p>
         </div>
         <div class="bento">
-          <a class="tile big" href="#pedals" style="--pos: 22% 50%"><img src="assets/img/pedalboard-board.jpg" alt="The pedalboard: Green Drive, Big Fuzz, Ensemble 1, Analog Memory, Tape Echo and Nebula in six slots" loading="lazy" width="1400" height="533"><span class="label"><b>33 STOMPBOXES</b><span>compacts from Dist 1 to Synth 1 and the bass line, Big Fuzz, Green Drive, Analog Memory, Nebula, Tape Echo — six slots, any order.</span></span></a>
-          <a class="tile" href="#tempo" style="--pos: 40% 30%"><img src="assets/img/detect-dialog.jpg" alt="Detect tempo: 116 BPM, steady or following the performance" loading="lazy" width="960" height="560"><span class="label"><b>TEMPO FROM THE AUDIO</b><span>One BPM, or a grid that follows the band.</span></span></a>
-          <a class="tile" href="#tempo" style="--pos: 40% 35%"><img src="assets/img/quantize-dialog.jpg" alt="Quantize: hits or clip starts, grid, strength, swing" loading="lazy" width="960" height="600"><span class="label"><b>QUANTIZE THE HITS</b><span>Cut at the attacks, phase-locked across the kit.</span></span></a>
+          <a class="tile big" href="#assistant" style="--pos: 100% 40%"><img src="assets/img/assistant.jpg" alt="The AI tab of the inspector: the ready-made requests and a plan of moves for the kick, each with its reason" loading="lazy" width="1400" height="875"><span class="label"><b>AI MIXING ASSISTANT</b><span>Say what the mix should become: it measures the session, reads the console and hands you a plan of moves to apply in one undo.</span></span></a>
+          <a class="tile" href="#tempo" style="--pos: 40% 30%"><img src="assets/img/detect-dialog.jpg" alt="Detect tempo: 116 BPM, steady or following the performance" loading="lazy" width="960" height="560"><span class="label"><b>TEMPO &amp; QUANTIZE</b><span>One BPM, or a grid that follows the band. Then Q.</span></span></a>
           <a class="tile" href="#record" style="--pos: 50% 40%"><img src="assets/img/pitch-editor.jpg" alt="The pitch editor: the notes of a bass clip on a piano roll over its waveform" loading="lazy" width="1400" height="875"><span class="label"><b>PITCH EDITOR</b><span>Detect the notes, drag them, snap to a scale, or draw with a pencil.</span></span></a>
           <a class="tile" href="#rack" style="--pos: 50% 15%"><img src="assets/img/mastering.jpg" alt="The Transistor Mastering Chain and the Two Stage compressor" loading="lazy" width="1400" height="875"><span class="label"><b>MASTERING</b><span>Transistor chain, Two Stage, Big Passive EQ, Sheen EQ.</span></span></a>
           <a class="tile" href="#fx" style="--pos: 20% 30%"><img src="assets/img/hall-board.jpg" alt="The Crystal Hall with its wired remote" loading="lazy" width="1400" height="525"><span class="label"><b>CRYSTAL HALL + REMOTE</b><span>Twelve programs, six faders, the red display.</span></span></a>
+          <a class="tile wide" href="#surfaces" style="--pos: 100% 25%"><img src="assets/img/surface.jpg" alt="The Control surface section of the Audio panel: Mackie Control, the MIDI ports of an X-Touch and its extender" loading="lazy" width="1400" height="875"><span class="label"><b>MACKIE &amp; HUI</b><span>Motorized faders, V-Pots, transport and scribble strips, from an X-Touch to the DAW layer of an X32.</span></span></a>
+          <a class="tile wide" href="#pedals" style="--pos: 22% 50%"><img src="assets/img/pedalboard-board.jpg" alt="The pedalboard: Green Drive, Big Fuzz, Ensemble 1, Analog Memory, Tape Echo and Nebula in six slots" loading="lazy" width="1400" height="533"><span class="label"><b>33 STOMPBOXES</b><span>Six slots, any order, every knob where it sits on the real one.</span></span></a>
           <a class="tile wide" href="#screens" style="--pos: 50% 30%"><img src="assets/img/screen-mix.jpg" alt="The Mix window alone on a second display" loading="lazy" width="1400" height="875"><span class="label"><b>EVERY SCREEN</b><span>Edit, Mix, FX or Rack full screen on each display.</span></span></a>
           <a class="tile wide" href="#pedals" style="--pos: 50% 20%"><img src="assets/img/rigcapture.jpg" alt="Rig Capture, the tuner and the guitar and bass EQ" loading="lazy" width="1400" height="875"><span class="label"><b>RIG CAPTURE &amp; TUNER</b><span>Twelve captured rigs, a tuner, an EQ tuned by note and scale.</span></span></a>
         </div>
@@ -199,6 +204,26 @@
             <div class="shot"><img src="assets/img/channel.jpg" alt="The full channel with the large EQ over the live analyser" loading="lazy" width="1400" height="875"></div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="assistant">
+      <div class="wrap">
+        <div class="split">
+          <div class="section-head" style="margin:0">
+            <span class="eyebrow">Mixing assistant · new in 1.3</span>
+            <h2 class="neon-amber">A SECOND PAIR OF EARS.</h2>
+            <p>Open the <b>AI</b> tab of the inspector (⌘J) and say what the mix should become. The assistant measures every channel and, if you like, a minute of the mix, reads the console, and answers with a <b>plan of moves</b> — faders, pans, EQ, sends, routing, inserts with their presets, effect buses, clip gain, fades, trims — each with its reason. Look it over and press <b>Apply</b>: the whole plan is one undo step. Discard it and nothing has moved.</p>
+            <p>Start from a ready-made request — <b>Balance the mix</b>, <b>Like a reference song</b>, <b>More pop</b>, <b>Rougher, in your face</b>, <b>Warm and vintage</b>, <b>Vocal forward</b>, <b>Master this song</b>, <b>Clean up the edit</b> — or write it in your own words: “kick and bass tighter, vocal brighter”, “take the mud out of the guitars”. The next request remembers the last ones, so “a bit less” works. <a href="/docs/#assistant">The guide has the details.</a></p>
+          </div>
+          <div class="shot"><img src="assets/img/assistant.jpg" alt="The Edit window with the AI tab of the inspector: the assistant on Claude, the ready-made requests, a request box, and a plan that turns the kick down 3 dB with a punchier EQ preset and a touch of the hall" loading="lazy" width="1400" height="875"></div>
+        </div>
+        <div class="cards three">
+          <div class="card"><h3>IT MEASURES FIRST</h3><p>Peak, RMS, integrated loudness, crest and loudness range, the tonal balance in eight bands, stereo correlation, how much of the time there is signal and the silence at the edges of every clip — channel by channel, and for the mix.</p></div>
+          <div class="card"><h3>YOUR MODEL, YOUR KEY</h3><p>Claude, GPT, Gemini, or any service or local server that speaks the OpenAI API — Mistral, OpenRouter, Ollama, LM Studio and more — with an API key of your own, billed by the service per use: a few cents a request on the big models.</p></div>
+          <div class="card"><h3>NEVER THE AUDIO</h3><p>It does nothing until you ask. Then it sends your request, the names and settings of the console and the measurements — never the audio, the recordings or the files. Keys stay on your Mac, in the keychain.</p></div>
+        </div>
+        <p class="compare-foot">Claude, Anthropic, GPT, OpenAI, Gemini, Google and the other names belong to their owners. There is no affiliation or endorsement. What is sent, and to whom, is in section 2.5 of the <a href="privacy.html#s2">Privacy Notice</a>.</p>
       </div>
     </section>
 
@@ -256,11 +281,14 @@
           <div class="card"><h3>PUNCH &amp; PRE-ROLL</h3><p>Free punch while playing, auto punch on the loop range, 1–4 bars of pre-roll, loop recording.</p></div>
           <div class="card"><h3>COMPING</h3><p>Open the takes under a track, drag across the good bit of any of them and press “Use this”.</p></div>
           <div class="card"><h3>TEMPO, GRID &amp; QUANTIZE</h3><p>Find the BPM and the grid in the audio — steady, or bar by bar for a band without a click — then quantize the hits, phase-locked across a drum kit. Plus a click strip with its own EQ and headphone sends.</p></div>
-          <div class="card"><h3>MARKERS</h3><p>Memory locations: keypad Enter drops one, “. 3 .” jumps there, ⌘5 lists them all with the export range.</p></div>
+          <div class="card"><h3>MARKERS</h3><p>Memory locations: keypad Enter drops one, “. 3 .” jumps there, ⌘5 lists them all with the export range; right click the markers bar to set the loop in and out.</p></div>
           <div class="card"><h3>PITCH EDITOR</h3><p>Detect the notes of a vocal or a bass, drag them to other notes, snap the whole clip to a key and scale, or draw the pitch you want with a pencil right on the waveform. Non-destructive, rendered live. A Pitch Corrector unit does it automatically on a live voice.</p></div>
           <div class="card"><h3>ELASTIC AUDIO</h3><p>⌥-drag a clip's edge and it stretches or shrinks to the new length at the same pitch, from 25% to 400%, without touching the file. Splits, trims, loops and quantize follow it.</p></div>
           <div class="card"><h3>CHANNEL NOTES</h3><p>A post-it under the inserts of every channel — the mic, the take to keep, what is still to do — saved with the session as you type, with a dot on the strip when there is one.</p></div>
           <div class="card"><h3>WAV &amp; MP3</h3><p>The mix, every stem or every output, of the song, the IN–OUT range or the loop, with a real progress bar.</p></div>
+          <div class="card"><h3>START THE SIZE YOU NEED</h3><p>A new session starts from an empty console, from a built-in one with 8, 16, 24, 32 or 48 tracks and the inputs in order, or from one of your templates. Any track can be deleted.</p></div>
+          <div class="card"><h3>STEREO IN ONE SLOT</h3><p>A stereo channel is one track in the Edit window, marked ST, with both waveforms in its clips and two meters in the header. Click a name to select, ⇧ or ⌘ click for more, double-click to rename.</p></div>
+          <div class="card"><h3>INPUT MONITOR</h3><p>I sits next to R on every track: hear what comes into the channel. ⌥ click sets every channel, ⌥⇧ click the selected ones.</p></div>
         </div>
       </div>
     </section>
@@ -357,10 +385,10 @@
           <div class="section-head wide">
             <span class="eyebrow">Screenshots</span>
             <h2 class="neon-pink">HAVE A LOOK AROUND.</h2>
-            <p>Twenty-eight screens from the demo session, shot while the final chorus plays: the desk, the rack, the pedalboard, the reverbs, the editors, the meters, the control surface and the settings. Scroll sideways, or tap one to see it full size.</p>
+            <p>Twenty-nine screens from the demo session, shot while the final chorus plays: the desk, the mixing assistant, the rack, the pedalboard, the reverbs, the editors, the meters, the control surface and the settings. Scroll sideways, or tap one to see it full size.</p>
           </div>
           <div class="shots-nav">
-            <span class="count" data-shots-count>01 / 28</span>
+            <span class="count" data-shots-count>01 / 29</span>
             <button type="button" data-shots-prev aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
             <button type="button" data-shots-next aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
           </div>
@@ -368,6 +396,7 @@
         <div class="strip" tabindex="0" aria-label="Screenshots: scroll sideways">
           <figure class="slide"><span class="tape" style="--tilt:-2deg">Mix</span><button type="button" class="shot" aria-label="Enlarge: the console"><img src="assets/img/gallery/mix.jpg" alt="The Mix window: ten channel strips with EQ, inserts, FX and aux sends, VCA selectors, faders and meters during the final chorus" loading="eager" fetchpriority="low" width="1600" height="1000"></button><figcaption><b>THE CONSOLE</b><span>48 channels, click, groups, FX returns, VCAs, auxes and master, left to right, every section at the same height.</span></figcaption></figure>
           <figure class="slide"><span class="tape" style="--tilt:1.5deg">Edit</span><button type="button" class="shot" aria-label="Enlarge: the Edit window"><img src="assets/img/gallery/edit.jpg" alt="The Edit window during the final chorus: waveforms on every track, markers above, the playhead following the page" loading="lazy" width="1600" height="1000"></button><figcaption><b>EDIT</b><span>The arrangement with its markers, the grid, the takes under every track and the tools you expect where you expect them.</span></figcaption></figure>
+          <figure class="slide"><span class="tape" style="--tilt:-2deg">Assistant</span><button type="button" class="shot" aria-label="Enlarge: the mixing assistant"><img src="assets/img/gallery/assistant.jpg" alt="The Edit window with the AI tab of the inspector: the assistant on Claude, the ready-made requests, a request box, and a plan that turns the kick down 3 dB with a punchier EQ preset and a touch of the hall" loading="lazy" width="1600" height="1000"></button><figcaption><b>MIXING ASSISTANT</b><span>Ask for a balance, the sound of a reference or a master: it measures the session and answers with a plan of moves, each with its reason, to apply in one undo.</span></figcaption></figure>
           <figure class="slide"><span class="tape" style="--tilt:-1deg">Pitch editor</span><button type="button" class="shot" aria-label="Enlarge: the pitch editor"><img src="assets/img/gallery/pitch.jpg" alt="The pitch editor on a bass clip: detected notes on a piano roll over the waveform, snapped to C major" loading="lazy" width="1600" height="1000"></button><figcaption><b>PITCH ON THE TRACK</b><span>Detect the notes of a clip, drag them, snap them to a key and scale, or draw the pitch with a pencil. Nothing touches the file.</span></figcaption></figure>
           <figure class="slide"><span class="tape" style="--tilt:1.5deg">Pitch Corrector</span><button type="button" class="shot" aria-label="Enlarge: the Pitch Corrector"><img src="assets/img/gallery/pitchfix.jpg" alt="The Pitch Corrector opened full size from the bass channel insert, over the console: key and scale, speed and amount, voice range, and the readout of the note heard, the target note and the cents" loading="lazy" width="1600" height="1000"></button><figcaption><b>PITCH CORRECTOR</b><span>The automatic one, for a live voice, opened from the channel insert: a key, a scale, how fast it pulls, and a readout of the note it hears and where it is taking it.</span></figcaption></figure>
           <figure class="slide"><span class="tape" style="--tilt:2deg">Channel</span><button type="button" class="shot" aria-label="Enlarge: the full channel"><img src="assets/img/gallery/channel.jpg" alt="The full channel of the bass: the large EQ over the live analyser, three inserts with meters, FX and aux sends, routing and a yellow post-it with notes" loading="lazy" width="1600" height="1000"></button><figcaption><b>THE FULL CHANNEL</b><span>The big EQ over the analyser, four inserts, sixteen sends, routing, and a post-it for the notes that stay with the session.</span></figcaption></figure>
@@ -435,11 +464,11 @@
             <h2><span class="neon-pink flicker">FREE.</span><br><span class="neon-cyan">NO CATCH.</span></h2>
             <p>Free for personal and professional use. No account, no subscription, no ads, no tracking. The music you make is yours.</p>
             <dl class="facts">
-              <dt>Version</dt><dd data-fact="version">1.3.0</dd>
-              <dt>File</dt><dd data-fact="file">Downstage-1.3.0-macOS-arm64.dmg</dd>
-              <dt>Size</dt><dd data-fact="size">134.5 MB</dd>
+              <dt>Version</dt><dd data-fact="version">1.3.1</dd>
+              <dt>File</dt><dd data-fact="file">Downstage-1.3.1-macOS-arm64.dmg</dd>
+              <dt>Size</dt><dd data-fact="size">134.2 MB</dd>
               <dt>Requires</dt><dd>macOS 13 Ventura or later on Apple Silicon (M1 and later)</dd>
-              <dt>SHA-256</dt><dd><code data-fact="sha">d437ab145776249d7f8435435131b22fb590633b0eaff904a9f02739d8c3890f</code></dd>
+              <dt>SHA-256</dt><dd><code data-fact="sha">1a82a70ca84aa388de2b595fcdccbbf56ebd1d24feececef2d2967ad683e1708</code></dd>
             </dl>
           </div>
           <div>
@@ -447,7 +476,7 @@
               <label><input type="checkbox" id="agree-license"> <span>I have read and accept the <a href="terms.html">End User License Agreement and Terms of Use</a> and the <a href="privacy.html">Privacy Notice</a>.</span></label>
               <label><input type="checkbox" id="agree-clauses"> <span>Under articles 1341 and 1342 of the Italian Civil Code, I specifically approve sections 3, 5, 6.4, 10, 11, 12, 13, 14, 15, 19 and 20.4–20.5 of the License Agreement (license limits, restrictions, no warranty, limitation of liability, indemnity, termination, governing law and jurisdiction).</span></label>
             </form>
-            <a class="btn" id="download-button" href="downloads/Downstage-1.3.0-macOS-arm64.dmg" aria-disabled="true" download>
+            <a class="btn" id="download-button" href="downloads/Downstage-1.3.1-macOS-arm64.dmg" aria-disabled="true" download>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
               Download for Mac
             </a>
@@ -520,7 +549,8 @@
       <div class="wrap">
         <div class="section-head"><span class="eyebrow">Questions</span><h2 class="neon-lime">FAQ</h2></div>
         <div class="faq">
-          <details open><summary>What's new in 1.2?</summary><p>Elastic audio: ⌥-drag a clip's edge and it stretches or shrinks at the same pitch, without touching the file. A pitch editor on every clip: detect the notes of a vocal or a bass, drag them, snap the clip to a key and scale, or draw the pitch with a pencil on the waveform; a Pitch Corrector unit does it live. A notes post-it on every channel. The master and every aux patched to any output pair, or to No out. Under the hood, the audio now streams from a disk cache instead of filling the memory, exports stream to disk, the engine follows device and sample-rate changes and restarts itself if it ever stops. If you have 1.0 or 1.1, the app finds 1.2 by itself and offers to install it.</p></details>
+          <details open><summary>What's new in 1.3?</summary><p>A mixing assistant in the AI tab of the inspector (⌘J): it measures every channel and a minute of the mix, reads the console and answers with a plan of moves — faders, pans, EQ, sends, routing, inserts with their presets, effect buses, clip gain, fades, trims — that you look over and apply as one undo step; it runs on Claude, GPT, Gemini or any OpenAI-compatible service or local server, with your own API key. Mackie Control and HUI control surfaces, from an X-Touch or a FaderPort to the DAW layer of an X32 or a DM7. New sessions start empty, or from built-in consoles of 8, 16, 24, 32 or 48 tracks; every track can be deleted; a stereo channel takes one track slot; an input monitor switch (I) next to R on every track; the loop in and out from the markers bar. If you have 1.0, 1.1 or 1.2, the app finds 1.3 by itself and offers to install it.</p></details>
+          <details><summary>What's new in 1.2?</summary><p>Elastic audio: ⌥-drag a clip's edge and it stretches or shrinks at the same pitch, without touching the file. A pitch editor on every clip: detect the notes of a vocal or a bass, drag them, snap the clip to a key and scale, or draw the pitch with a pencil on the waveform; a Pitch Corrector unit does it live. A notes post-it on every channel. The master and every aux patched to any output pair, or to No out. Under the hood, the audio now streams from a disk cache instead of filling the memory, exports stream to disk, the engine follows device and sample-rate changes and restarts itself if it ever stops. If you have 1.0 or 1.1, the app finds 1.2 by itself and offers to install it.</p></details>
           <details><summary>What's new in 1.1?</summary><p>A pedalboard with 33 classic stompboxes; a mastering section with the transistor mastering chain, Two Stage, Big Passive EQ and Sheen EQ; the Crystal Hall with its remote, the Quad FX and the Echo Chambers; Rig Capture, a tuner and an EQ tuned by note; transistor-desk, broadcast, touring-desk and discrete-console units; over 600 factory presets plus your own; tempo and grid detection and quantize; the waveform while recording; Edit, Mix, FX and Rack on extra displays; session templates; dBFS meters and a master meter in the top bar; a clock-only mode for live recordings. If you have 1.0, it finds 1.1 by itself and offers to install it.</p></details>
           <details><summary>Is it really free?</summary><p>Yes. Downstage is free for personal and professional use, including recording, mixing and releasing music commercially. You keep every right to your music.</p></details>
           <details><summary>Can I buy you a beer?</summary><p>Only if you feel like it. Downstage stays free either way. If a song you made with it is out in the world and you want to say thanks, <a href="https://www.paypal.com/paypalme/andreapollastri" target="_blank" rel="noopener">buy me a beer — or a brand-new Telecaster</a>, should the night have gone that well.</p></details>
@@ -529,10 +559,11 @@
           <details><summary>Does it load plugins?</summary><p>No. Downstage comes with its own 65 rack units, 33 pedals and 12 effects, built into the engine, so sessions always open the same way on any Mac.</p></details>
           <details><summary>Can it find the tempo of a band recorded without a click?</summary><p>Yes. Detect tempo listens to the session (or to the tracks you pick) and offers one steady tempo, or a tempo for every bar that follows the performance; it can also move the song so the first downbeat lands on a bar line. Quantize then works on that grid.</p></details>
           <details><summary>Can I use a control surface or my console?</summary><p>Yes. Downstage speaks Mackie Control (MCU) and HUI over MIDI, so fader controllers such as the Behringer X-Touch, Mackie MCU Pro, PreSonus FaderPort, SSL UF8, iCON QCon and Korg nanoKONTROL work, and so does the DAW remote layer of consoles like the Behringer X32 and Midas M32, WING, Yamaha DM3 and DM7, Allen &amp; Heath SQ, Qu, Avantis and dLive, PreSonus StudioLive Series III and Tascam Model 12. Put the device in its Mackie Control or HUI mode, pick its MIDI ports in the Audio panel, and the faders, sends, mute, solo, transport and displays follow the mix. <a href="/docs/#surfaces">The guide explains it model by model.</a> Surfaces that only speak EUCON (Avid) are not supported.</p></details>
+          <details><summary>What does the AI assistant need, and what does it send?</summary><p>An API key of your own from Anthropic (Claude), OpenAI (GPT), Google (Gemini) or another service that speaks the OpenAI API — or a model running on your own Mac, with Ollama or LM Studio. The service bills the key per use, a few cents a request on the big models; a chat subscription to ChatGPT, Claude or Gemini cannot be used by another app. The assistant does nothing until you ask; then it sends your request, the names and settings of the console and measurements of the audio made on your Mac — never the audio itself, your recordings or your files. See section 2.5 of the <a href="privacy.html#s2">Privacy Notice</a>.</p></details>
           <details><summary>Can I use more than one screen?</summary><p>Yes. With more displays connected, send Edit, Mix, FX or Rack full screen to each of them; every screen works on the same session.</p></details>
           <details><summary>Are the amps and compressors official?</summary><p>No. They are independent models inspired by classic gear. Product names are used only to describe the sound they recall and belong to their owners; there is no affiliation or endorsement.</p></details>
           <details><summary>Where does the demo song come from?</summary><p>It was created by Andrea Pollastri with Claude for Downstage: twelve stems of an instrumental song at 116 BPM, mixed in Downstage. It comes with the app to learn the console: open it, take it apart and remix it. See section 7 of the <a href="terms.html#s7">License Agreement</a>.</p></details>
-          <details><summary>Does it collect data?</summary><p>The app works offline, with no account and no telemetry; it only asks downstage.it whether a newer version is out (you can turn that off). The website uses no cookies. It counts visits with a script from stats.misterdev.it; see the <a href="privacy.html">Privacy Notice</a>.</p></details>
+          <details><summary>Does it collect data?</summary><p>The app works offline, with no account and no telemetry; on its own it only asks downstage.it whether a newer version is out (you can turn that off). The mixing assistant, if you set it up, talks to the AI service you chose only when you send it a request. The website uses no cookies. It counts visits with a script from stats.misterdev.it; see the <a href="privacy.html">Privacy Notice</a>.</p></details>
           <details><summary>How do updates arrive?</summary><p>Downstage checks this site for a new version when it starts and from its menu. When one is out it asks, downloads it, checks its signature and checksum, and installs it when you quit — your session is saved first. If you prefer, download the disk image here and drag the app over the old one.</p></details>
         </div>
       </div>

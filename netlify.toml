@@ -5,7 +5,7 @@
 
 [[redirects]]
   from = "/download"
-  to = "/downloads/Downstage-1.3.0-macOS-arm64.dmg"
+  to = "/downloads/Downstage-1.3.1-macOS-arm64.dmg"
   status = 302
 
 # The disk image and the zip are in the GitHub release of their version
@@ -13,7 +13,7 @@
 # there. Files that are in the site (the .sha256) are served as they are.
 [[redirects]]
   from = "/downloads/:file"
-  to = "https://github.com/andreapollastri/downstage-website/releases/download/v1.3.0/:file"
+  to = "https://github.com/andreapollastri/downstage-website/releases/download/v1.3.1/:file"
   status = 302
 
 [[redirects]]
