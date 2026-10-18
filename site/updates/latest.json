@@ -1,18 +1,18 @@
 {
- "version": "1.2.0",
- "date": "2026-10-08",
- "notes": "Downstage 1.2: elastic audio (stretch a clip to a new length at the same pitch, without touching the file); a pitch editor on every clip (detect the notes, drag them, snap to a key and scale, or draw the pitch with a pencil on the waveform) and a Pitch Corrector unit for live voices; a notes post-it on every channel; the master and every aux patched to any output pair, or to No out; audio streamed from a disk cache instead of filling the memory; exports that stream to disk; an engine that follows device and sample-rate changes and restarts itself; the waveform of every clip drawn right.",
+ "version": "1.3.0",
+ "date": "2026-10-18",
+ "notes": "Downstage 1.3: a mixing assistant in the inspector (AI tab, ⌘J) that measures every channel and a minute of the mix, reads the console and answers with a plan of moves — faders, pans, EQ, sends, routing, inserts with their presets, effect buses, clip gain, fades, trims — that you look over and apply as one undo step; ready-made requests (balance the mix, like a reference song, more pop, rougher, warm and vintage, vocal forward, master this song, clean up the edit) or your own words; it runs on Claude, GPT, Gemini or any OpenAI-compatible service or local server, with your own API key. New sessions start with no channels, and built-in templates bring 8, 16, 24, 32 or 48 tracks; every track can be deleted; an input monitor switch (I) sits next to R on every track in the Edit window.",
  "minimumSystemVersion": "13.0",
  "arch": "arm64",
  "zip": {
-  "url": "https://downstage.it/downloads/Downstage-1.2.0-macOS-arm64.zip",
-  "sha256": "fc09cfdc5459d40c5c86e082d8cd39c15a58e71e7db231a0ebe982dbb06e2ebc",
-  "size": 135085939
+  "url": "https://downstage.it/downloads/Downstage-1.3.0-macOS-arm64.zip",
+  "sha256": "564a0ed65987c63b3232099527aa0bf368250cfd5ee10519aee0f3cc176f2243",
+  "size": 137834368
  },
  "dmg": {
-  "url": "https://downstage.it/downloads/Downstage-1.2.0-macOS-arm64.dmg",
-  "sha256": "9320fc965558dbbcf6bae083f4ffb968216f73a9e7f386bbc03896ee54c9943a",
-  "size": 138748542
+  "url": "https://downstage.it/downloads/Downstage-1.3.0-macOS-arm64.dmg",
+  "sha256": "d437ab145776249d7f8435435131b22fb590633b0eaff904a9f02739d8c3890f",
+  "size": 140995555
  },
- "signature": "Bn+OhO16gh6RSg4l/yiv2CpyDvl9sWJ7XcHXiJNvn6dgY91y6SYCzHzrsKOk6Ko4KVsrOjXY2ohBdu0aVIccAQ=="
+ "signature": "8IjUJu2+/PDOROAfrf+805mmYQNFFyWzm1a4s6lCvA8p6UdgGjdY492xFqWsAVFIAMONBl8i1aEHbeKfTn/MCQ=="
 }

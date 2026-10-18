@@ -100,6 +100,7 @@ const SHORTCUTS = [
       [T("New session · open · save", "Nuova sessione · apri · salva", "Nouvelle session · ouvrir · enregistrer", "Neue Session · öffnen · sichern", "Sesión nueva · abrir · guardar", "Sessão nova · abrir · salvar"), "⌘N · ⌘O · ⌘S"],
       [T("A page on another display (full screen)", "Una pagina su un altro monitor (a tutto schermo)", "Une page sur un autre moniteur (plein écran)", "Eine Seite auf einem anderen Display (Vollbild)", "Una página en otro monitor (pantalla completa)", "Uma página em outro monitor (tela cheia)"), T("screens button", "pulsante degli schermi", "bouton des écrans", "Bildschirm-Taste", "botón de pantallas", "botão das telas")],
       [T("Shortcuts · Guide", "Scorciatoie · Guida", "Raccourcis · Guide", "Tastaturbefehle · Anleitung", "Atajos · Guía", "Atalhos · Guia"), "? · F1"],
+      [T("Assistant (AI tab of the inspector)", "Assistente (scheda AI dell'inspector)", "Assistant (onglet AI de l'inspecteur)", "Assistent (Reiter AI des Inspektors)", "Asistente (pestaña AI del inspector)", "Assistente (aba AI do inspetor)"), "⌘J"],
     ],
   },
   {
@@ -128,12 +129,14 @@ const SHORTCUTS = [
       ["Memory Locations", "⌘5"],
       [T("Export start / end while playing", "Inizio / fine export durante il play", "Début / fin d'export en lecture", "Exportanfang / -ende bei der Wiedergabe", "Inicio / fin de exportación al reproducir", "Início / fim da exportação tocando"), "↓ · ↑"],
       [T("Rename · delete a marker", "Rinomina · cancella un marker", "Renommer · supprimer un marqueur", "Marker umbenennen · löschen", "Renombrar · borrar un marcador", "Renomear · apagar um marcador"), renameKey],
+      [T("Loop in / out · export start / end", "Loop in / out · inizio / fine export", "Début / fin de boucle · début / fin d'export", "Loop-Anfang / -Ende · Export-Anfang / -Ende", "Entrada / salida del bucle · inicio / fin de exportación", "Entrada / saída do loop · início / fim da exportação"), T("right click the markers bar", "tasto destro sulla barra dei marker", "clic droit sur la barre des marqueurs", "Rechtsklick auf die Markerleiste", "clic derecho en la barra de marcadores", "botão direito na barra de marcadores")],
     ],
   },
   {
     title: T("Mute, solo, record arm", "Mute, solo, armare la registrazione", "Mute, solo, armement", "Mute, Solo, Aufnahmebereitschaft", "Mute, solo, armar grabación", "Mute, solo, armar gravação"),
     rows: [
       [T("Every channel", "Tutti i canali", "Toutes les voies", "Alle Kanäle", "Todos los canales", "Todos os canais"), "⌥M · ⌥S · ⌥R"],
+      [T("Input monitor (I on the track, or ⌥ / ⌥⇧ click)", "Input monitor (I sulla traccia, o ⌥ / ⌥⇧ clic)", "Écoute de l'entrée (I sur la piste, ou ⌥ / ⌥⇧ clic)", "Eingangsabhören (I auf der Spur, oder ⌥ / ⌥⇧ Klick)", "Monitor de entrada (I en la pista, o ⌥ / ⌥⇧ clic)", "Monitor de entrada (I na faixa, ou ⌥ / ⌥⇧ clique)"), T("all / selected", "tutti / selezionati", "toutes / sélectionnées", "alle / ausgewählte", "todos / seleccionados", "todos / selecionados")],
       [T("Selected channels", "Canali selezionati", "Voies sélectionnées", "Ausgewählte Kanäle", "Canales seleccionados", "Canais selecionados"), "⌥⇧M · ⌥⇧S · ⌥⇧R"],
       [T("Click with ⌥ / ⌥⇧", "Clic con ⌥ / ⌥⇧", "Clic avec ⌥ / ⌥⇧", "Klick mit ⌥ / ⌥⇧", "Clic con ⌥ / ⌥⇧", "Clique com ⌥ / ⌥⇧"), T("all / selected", "tutti / selezionati", "toutes / sélectionnées", "alle / ausgewählte", "todos / seleccionados", "todos / selecionados")],
       [T("Exclusive solo", "Solo esclusivo", "Solo exclusif", "Exklusives Solo", "Solo exclusivo", "Solo exclusivo"), T("⌘ click S", "⌘ clic su S", "⌘ clic sur S", "⌘-Klick auf S", "⌘ clic en S", "⌘ clique em S")],
@@ -173,6 +176,8 @@ const SHORTCUTS = [
       [T("Nudge clip or cursor", "Sposta a piccoli passi clip o cursore", "Décaler le clip ou le curseur", "Clip oder Cursor in Schritten verschieben", "Desplazar el clip o el cursor", "Deslocar o clip ou o cursor"), "← → · + −"],
       [T("Previous / next track", "Traccia precedente / successiva", "Piste précédente / suivante", "Vorherige / nächste Spur", "Pista anterior / siguiente", "Faixa anterior / seguinte"), "↑ ↓ · P ;"],
       [T("Select all · duplicate", "Seleziona tutto · duplica", "Tout sélectionner · dupliquer", "Alles auswählen · duplizieren", "Seleccionar todo · duplicar", "Selecionar tudo · duplicar"), "⌘A · ⌘D"],
+      [T("Select a track · add or remove one · a range", "Seleziona una traccia · aggiungi o togli · un intervallo", "Sélectionner une piste · en ajouter ou retirer une · une plage", "Eine Spur auswählen · eine hinzufügen oder entfernen · einen Bereich", "Seleccionar una pista · añadir o quitar una · un rango", "Selecionar uma faixa · adicionar ou remover uma · um intervalo"), T("click the name · ⌘ click · ⇧ click", "clic sul nome · ⌘ clic · ⇧ clic", "clic sur le nom · ⌘ clic · ⇧ clic", "Klick auf den Namen · ⌘-Klick · ⇧-Klick", "clic en el nombre · ⌘ clic · ⇧ clic", "clique no nome · ⌘ clique · ⇧ clique")],
+      [T("Rename a track", "Rinomina una traccia", "Renommer une piste", "Eine Spur umbenennen", "Renombrar una pista", "Renomear uma faixa"), T("double-click its name", "doppio clic sul nome", "double-clic sur le nom", "Doppelklick auf den Namen", "doble clic en el nombre", "clique duplo no nome")],
       [T("Clip gain ±1 dB", "Gain clip ±1 dB", "Gain du clip ±1 dB", "Clip-Gain ±1 dB", "Ganancia del clip ±1 dB", "Ganho do clip ±1 dB"), "⌃⇧↑ · ⌃⇧↓"],
       [T("Clip commands: loop, normalize, gain, quantize", "Comandi clip: loop, normalizza, gain, quantizza", "Commandes du clip : boucle, normaliser, gain, quantifier", "Clip-Befehle: Loop, Normalisieren, Gain, Quantisieren", "Comandos del clip: bucle, normalizar, ganancia, cuantizar", "Comandos do clip: loop, normalizar, ganho, quantizar"), T("right click a clip", "clic destro su una clip", "clic droit sur un clip", "Rechtsklick auf einen Clip", "clic derecho en un clip", "clique direito num clip")],
       [T("Quantize the selected clips", "Quantizza le clip selezionate", "Quantifier les clips sélectionnés", "Ausgewählte Clips quantisieren", "Cuantizar los clips seleccionados", "Quantizar os clips selecionados"), "Q"],
